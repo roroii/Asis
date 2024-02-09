@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light">
+<!-- BEGIN: Head -->
+<head>
+    <meta charset="utf-8">
+
+
+
+
+<link style="border-radius: 50%" href="http://192.168.10.12/uploads/settings/1_theG1690183138.png" class=" rounded-full overflow-hidden shadow-lg image-fit zoom-in ml-5" rel="shortcut icon">
+
+
+    <title>ASIS - Student Portal</title>
+
+
+
+
+
+
+    <title>ASIS - Student Portal</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-HRIS">
+<meta name="keywords" content="e-HRIS">
+<meta name="author" content="">
+<meta name="csrf-token" content="Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ">
+<meta name="current-user-id" content="">
+<meta name="basepath" content="http://192.168.10.12">
+
+
+
+<!-- Font Awesome 6.2.1 CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Font Awesome 6.2.1 Thin CSS -->
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="http://192.168.10.12/vendor/icofont/icofont.min.css">
+
+
+
+
+<!-- BEGIN: CSS Assets-->
+<link rel="stylesheet" href="http://192.168.10.12/assets/datatable/datatables_1.13.1/css/dataTables.bootstrap5.min.css" />
+<link rel="stylesheet" href="http://192.168.10.12/dist/css/app.css" />
+
+<link rel="stylesheet" href="http://192.168.10.12/assets/fa.5.15.4/css/all.min.css" />
+<link rel="stylesheet" href="http://192.168.10.12/assets/uniupload/uniupload.css?ts=20231010133017" />
+<!-- END: CSS Assets-->
+
+
+<link href="http://192.168.10.12/assets/filepond-master/dist/filepond.css" rel="stylesheet">
+<link href="http://192.168.10.12/assets/filepond-master/dist/filepond.min.css" rel="stylesheet">
+<link href="http://192.168.10.12/assets/filepond-master/dist/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet">
+
+
+
+<link href="http://192.168.10.12/vendor/select2/css/select2.min.css?ts=20231010133017" rel="stylesheet" />
+<link href="http://192.168.10.12/vendor/select2/css/select2.single-error.css?ts=20231010133017" rel="stylesheet" />
+<link href="http://192.168.10.12/vendor/select2/css/select2.multiple-error.css?ts=20231010133017" rel="stylesheet" />
+<link href="http://192.168.10.12/vendor/select2/css/select2.custom.css?ts=20231010133017" rel="stylesheet" />
+
+
+
+<!-- plugin css file  -->
+<link rel="stylesheet" href="http://192.168.10.12/assets/plugin/datatables/responsive.dataTables.min.css">
+<link rel="stylesheet" href="http://192.168.10.12/assets/plugin/datatables/dataTables.bootstrap5.min.css">
+<link href="http://192.168.10.12/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+
+
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="http://192.168.10.12/vendor/tooltipster/css/tooltipster.bundle.css?ts=20231010133017" />
+
+<link rel="stylesheet" href="http://192.168.10.12/css/custom.css?ts=20231010133017" />
+<link rel="stylesheet" href="http://192.168.10.12/assets/mycalendar/style.css?ts=20231010133017" />
+
+<!-- chart plugs  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+
+<!-- Add this link in the head section of your layout -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+
+
+
+
+<link rel='stylesheet' type='text/css' property='stylesheet' href='//192.168.10.12/_debugbar/assets/stylesheets?v=1675999628&theme=auto' data-turbolinks-eval='false' data-turbo-eval='false'><script src='//192.168.10.12/_debugbar/assets/javascript?v=1675999628' data-turbolinks-eval='false' data-turbo-eval='false'></script><script data-turbo-eval="false">jQuery.noConflict(true);</script>
+<script> Sfdump = window.Sfdump || (function (doc) { var refStyle = doc.createElement('style'), rxEsc = /([.*+?^${}()|\[\]\/\\])/g, idRx = /\bsf-dump-\d+-ref[012]\w+\b/, keyHint = 0 <= navigator.platform.toUpperCase().indexOf('MAC') ? 'Cmd' : 'Ctrl', addEventListener = function (e, n, cb) { e.addEventListener(n, cb, false); }; refStyle.innerHTML = '.phpdebugbar pre.sf-dump .sf-dump-compact, .sf-dump-str-collapse .sf-dump-str-collapse, .sf-dump-str-expand .sf-dump-str-expand { display: none; }'; doc.head.appendChild(refStyle); refStyle = doc.createElement('style'); doc.head.appendChild(refStyle); if (!doc.addEventListener) { addEventListener = function (element, eventName, callback) { element.attachEvent('on' + eventName, function (e) { e.preventDefault = function () {e.returnValue = false;}; e.target = e.srcElement; callback(e); }); }; } function toggle(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className, arrow, newClass; if (/\bsf-dump-compact\b/.test(oldClass)) { arrow = '▼'; newClass = 'sf-dump-expanded'; } else if (/\bsf-dump-expanded\b/.test(oldClass)) { arrow = '▶'; newClass = 'sf-dump-compact'; } else { return false; } if (doc.createEvent && s.dispatchEvent) { var event = doc.createEvent('Event'); event.initEvent('sf-dump-expanded' === newClass ? 'sfbeforedumpexpand' : 'sfbeforedumpcollapse', true, false); s.dispatchEvent(event); } a.lastChild.innerHTML = arrow; s.className = s.className.replace(/\bsf-dump-(compact|expanded)\b/, newClass); if (recursive) { try { a = s.querySelectorAll('.'+oldClass); for (s = 0; s < a.length; ++s) { if (-1 == a[s].className.indexOf(newClass)) { a[s].className = newClass; a[s].previousSibling.lastChild.innerHTML = arrow; } } } catch (e) { } } return true; }; function collapse(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-expanded\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function expand(a, recursive) { var s = a.nextSibling || {}, oldClass = s.className; if (/\bsf-dump-compact\b/.test(oldClass)) { toggle(a, recursive); return true; } return false; }; function collapseAll(root) { var a = root.querySelector('a.sf-dump-toggle'); if (a) { collapse(a, true); expand(a); return true; } return false; } function reveal(node) { var previous, parents = []; while ((node = node.parentNode || {}) && (previous = node.previousSibling) && 'A' === previous.tagName) { parents.push(previous); } if (0 !== parents.length) { parents.forEach(function (parent) { expand(parent); }); return true; } return false; } function highlight(root, activeNode, nodes) { resetHighlightedNodes(root); Array.from(nodes||[]).forEach(function (node) { if (!/\bsf-dump-highlight\b/.test(node.className)) { node.className = node.className + ' sf-dump-highlight'; } }); if (!/\bsf-dump-highlight-active\b/.test(activeNode.className)) { activeNode.className = activeNode.className + ' sf-dump-highlight-active'; } } function resetHighlightedNodes(root) { Array.from(root.querySelectorAll('.sf-dump-str, .sf-dump-key, .sf-dump-public, .sf-dump-protected, .sf-dump-private')).forEach(function (strNode) { strNode.className = strNode.className.replace(/\bsf-dump-highlight\b/, ''); strNode.className = strNode.className.replace(/\bsf-dump-highlight-active\b/, ''); }); } return function (root, x) { root = doc.getElementById(root); var indentRx = new RegExp('^('+(root.getAttribute('data-indent-pad') || ' ').replace(rxEsc, '\\$1')+')+', 'm'), options = {"maxDepth":1,"maxStringLength":160,"fileLinkFormat":false}, elt = root.getElementsByTagName('A'), len = elt.length, i = 0, s, h, t = []; while (i < len) t.push(elt[i++]); for (i in x) { options[i] = x[i]; } function a(e, f) { addEventListener(root, e, function (e, n) { if ('A' == e.target.tagName) { f(e.target, e); } else if ('A' == e.target.parentNode.tagName) { f(e.target.parentNode, e); } else { n = /\bsf-dump-ellipsis\b/.test(e.target.className) ? e.target.parentNode : e.target; if ((n = n.nextElementSibling) && 'A' == n.tagName) { if (!/\bsf-dump-toggle\b/.test(n.className)) { n = n.nextElementSibling || n; } f(n, e, true); } } }); }; function isCtrlKey(e) { return e.ctrlKey || e.metaKey; } function xpathString(str) { var parts = str.match(/[^'"]+|['"]/g).map(function (part) { if ("'" == part) { return '"\'"'; } if ('"' == part) { return "'\"'"; } return "'" + part + "'"; }); return "concat(" + parts.join(",") + ", '')"; } function xpathHasClass(className) { return "contains(concat(' ', normalize-space(@class), ' '), ' " + className +" ')"; } addEventListener(root, 'mouseover', function (e) { if ('' != refStyle.innerHTML) { refStyle.innerHTML = ''; } }); a('mouseover', function (a, e, c) { if (c) { e.target.style.cursor = "pointer"; } else if (a = idRx.exec(a.className)) { try { refStyle.innerHTML = '.phpdebugbar pre.sf-dump .'+a[0]+'{background-color: #B729D9; color: #FFF !important; border-radius: 2px}'; } catch (e) { } } }); a('click', function (a, e, c) { if (/\bsf-dump-toggle\b/.test(a.className)) { e.preventDefault(); if (!toggle(a, isCtrlKey(e))) { var r = doc.getElementById(a.getAttribute('href').slice(1)), s = r.previousSibling, f = r.parentNode, t = a.parentNode; t.replaceChild(r, a); f.replaceChild(a, s); t.insertBefore(s, r); f = f.firstChild.nodeValue.match(indentRx); t = t.firstChild.nodeValue.match(indentRx); if (f && t && f[0] !== t[0]) { r.innerHTML = r.innerHTML.replace(new RegExp('^'+f[0].replace(rxEsc, '\\$1'), 'mg'), t[0]); } if (/\bsf-dump-compact\b/.test(r.className)) { toggle(s, isCtrlKey(e)); } } if (c) { } else if (doc.getSelection) { try { doc.getSelection().removeAllRanges(); } catch (e) { doc.getSelection().empty(); } } else { doc.selection.empty(); } } else if (/\bsf-dump-str-toggle\b/.test(a.className)) { e.preventDefault(); e = a.parentNode.parentNode; e.className = e.className.replace(/\bsf-dump-str-(expand|collapse)\b/, a.parentNode.className); } }); elt = root.getElementsByTagName('SAMP'); len = elt.length; i = 0; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; if ('SAMP' == elt.tagName) { a = elt.previousSibling || {}; if ('A' != a.tagName) { a = doc.createElement('A'); a.className = 'sf-dump-ref'; elt.parentNode.insertBefore(a, elt); } else { a.innerHTML += ' '; } a.title = (a.title ? a.title+'\n[' : '[')+keyHint+'+click] Expand all children'; a.innerHTML += elt.className == 'sf-dump-compact' ? '<span>▶</span>' : '<span>▼</span>'; a.className += ' sf-dump-toggle'; x = 1; if ('sf-dump' != elt.parentNode.className) { x += elt.parentNode.getAttribute('data-depth')/1; } } else if (/\bsf-dump-ref\b/.test(elt.className) && (a = elt.getAttribute('href'))) { a = a.slice(1); elt.className += ' '+a; if (/[\[{]$/.test(elt.previousSibling.nodeValue)) { a = a != elt.nextSibling.id && doc.getElementById(a); try { s = a.nextSibling; elt.appendChild(a); s.parentNode.insertBefore(a, s); if (/^[@#]/.test(elt.innerHTML)) { elt.innerHTML += ' <span>▶</span>'; } else { elt.innerHTML = '<span>▶</span>'; elt.className = 'sf-dump-ref'; } elt.className += ' sf-dump-toggle'; } catch (e) { if ('&' == elt.innerHTML.charAt(0)) { elt.innerHTML = '…'; elt.className = 'sf-dump-ref'; } } } } } if (doc.evaluate && Array.from && root.children.length > 1) { root.setAttribute('tabindex', 0); SearchState = function () { this.nodes = []; this.idx = 0; }; SearchState.prototype = { next: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx < (this.nodes.length - 1) ? this.idx + 1 : 0; return this.current(); }, previous: function () { if (this.isEmpty()) { return this.current(); } this.idx = this.idx > 0 ? this.idx - 1 : (this.nodes.length - 1); return this.current(); }, isEmpty: function () { return 0 === this.count(); }, current: function () { if (this.isEmpty()) { return null; } return this.nodes[this.idx]; }, reset: function () { this.nodes = []; this.idx = 0; }, count: function () { return this.nodes.length; }, }; function showCurrent(state) { var currentNode = state.current(), currentRect, searchRect; if (currentNode) { reveal(currentNode); highlight(root, currentNode, state.nodes); if ('scrollIntoView' in currentNode) { currentNode.scrollIntoView(true); currentRect = currentNode.getBoundingClientRect(); searchRect = search.getBoundingClientRect(); if (currentRect.top < (searchRect.top + searchRect.height)) { window.scrollBy(0, -(searchRect.top + searchRect.height + 5)); } } } counter.textContent = (state.isEmpty() ? 0 : state.idx + 1) + ' of ' + state.count(); } var search = doc.createElement('div'); search.className = 'sf-dump-search-wrapper sf-dump-search-hidden'; search.innerHTML = ' <input type="text" class="sf-dump-search-input"> <span class="sf-dump-search-count">0 of 0<\/span> <button type="button" class="sf-dump-search-input-previous" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19L896 965l-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> <button type="button" class="sf-dump-search-input-next" tabindex="-1"> <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 808l-742 741q-19 19-45 19t-45-19L109 808q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z"\/><\/svg> <\/button> '; root.insertBefore(search, root.firstChild); var state = new SearchState(); var searchInput = search.querySelector('.sf-dump-search-input'); var counter = search.querySelector('.sf-dump-search-count'); var searchInputTimer = 0; var previousSearchQuery = ''; addEventListener(searchInput, 'keyup', function (e) { var searchQuery = e.target.value; /* Don't perform anything if the pressed key didn't change the query */ if (searchQuery === previousSearchQuery) { return; } previousSearchQuery = searchQuery; clearTimeout(searchInputTimer); searchInputTimer = setTimeout(function () { state.reset(); collapseAll(root); resetHighlightedNodes(root); if ('' === searchQuery) { counter.textContent = '0 of 0'; return; } var classMatches = [ "sf-dump-str", "sf-dump-key", "sf-dump-public", "sf-dump-protected", "sf-dump-private", ].map(xpathHasClass).join(' or '); var xpathResult = doc.evaluate('.//span[' + classMatches + '][contains(translate(child::text(), ' + xpathString(searchQuery.toUpperCase()) + ', ' + xpathString(searchQuery.toLowerCase()) + '), ' + xpathString(searchQuery.toLowerCase()) + ')]', root, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null); while (node = xpathResult.iterateNext()) state.nodes.push(node); showCurrent(state); }, 400); }); Array.from(search.querySelectorAll('.sf-dump-search-input-next, .sf-dump-search-input-previous')).forEach(function (btn) { addEventListener(btn, 'click', function (e) { e.preventDefault(); -1 !== e.target.className.indexOf('next') ? state.next() : state.previous(); searchInput.focus(); collapseAll(root); showCurrent(state); }) }); addEventListener(root, 'keydown', function (e) { var isSearchActive = !/\bsf-dump-search-hidden\b/.test(search.className); if ((114 === e.keyCode && !isSearchActive) || (isCtrlKey(e) && 70 === e.keyCode)) { /* F3 or CMD/CTRL + F */ if (70 === e.keyCode && document.activeElement === searchInput) { /* * If CMD/CTRL + F is hit while having focus on search input, * the user probably meant to trigger browser search instead. * Let the browser execute its behavior: */ return; } e.preventDefault(); search.className = search.className.replace(/\bsf-dump-search-hidden\b/, ''); searchInput.focus(); } else if (isSearchActive) { if (27 === e.keyCode) { /* ESC key */ search.className += ' sf-dump-search-hidden'; e.preventDefault(); resetHighlightedNodes(root); searchInput.value = ''; } else if ( (isCtrlKey(e) && 71 === e.keyCode) /* CMD/CTRL + G */ || 13 === e.keyCode /* Enter */ || 114 === e.keyCode /* F3 */ ) { e.preventDefault(); e.shiftKey ? state.previous() : state.next(); collapseAll(root); showCurrent(state); } } }); } if (0 >= options.maxStringLength) { return; } try { elt = root.querySelectorAll('.sf-dump-str'); len = elt.length; i = 0; t = []; while (i < len) t.push(elt[i++]); len = t.length; for (i = 0; i < len; ++i) { elt = t[i]; s = elt.innerText || elt.textContent; x = s.length - options.maxStringLength; if (0 < x) { h = elt.innerHTML; elt[elt.innerText ? 'innerText' : 'textContent'] = s.substring(0, options.maxStringLength); elt.className += ' sf-dump-str-collapse'; elt.innerHTML = '<span class=sf-dump-str-collapse>'+h+'<a class="sf-dump-ref sf-dump-str-toggle" title="Collapse"> ◀</a></span>'+ '<span class=sf-dump-str-expand>'+elt.innerHTML+'<a class="sf-dump-ref sf-dump-str-toggle" title="'+x+' remaining characters"> ▶</a></span>'; } } } catch (e) { } }; })(document); </script><style> .phpdebugbar pre.sf-dump { display: block; white-space: pre; padding: 5px; overflow: initial !important; } .phpdebugbar pre.sf-dump:after { content: ""; visibility: hidden; display: block; height: 0; clear: both; } .phpdebugbar pre.sf-dump span { display: inline; } .phpdebugbar pre.sf-dump a { text-decoration: none; cursor: pointer; border: 0; outline: none; color: inherit; } .phpdebugbar pre.sf-dump img { max-width: 50em; max-height: 50em; margin: .5em 0 0 0; padding: 0; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAHUlEQVQY02O8zAABilCaiQEN0EeA8QuUcX9g3QEAAjcC5piyhyEAAAAASUVORK5CYII=) #D3D3D3; } .phpdebugbar pre.sf-dump .sf-dump-ellipsis { display: inline-block; overflow: visible; text-overflow: ellipsis; max-width: 5em; white-space: nowrap; overflow: hidden; vertical-align: top; } .phpdebugbar pre.sf-dump .sf-dump-ellipsis+.sf-dump-ellipsis { max-width: none; } .phpdebugbar pre.sf-dump code { display:inline; padding:0; background:none; } .sf-dump-public.sf-dump-highlight, .sf-dump-protected.sf-dump-highlight, .sf-dump-private.sf-dump-highlight, .sf-dump-str.sf-dump-highlight, .sf-dump-key.sf-dump-highlight { background: rgba(111, 172, 204, 0.3); border: 1px solid #7DA0B1; border-radius: 3px; } .sf-dump-public.sf-dump-highlight-active, .sf-dump-protected.sf-dump-highlight-active, .sf-dump-private.sf-dump-highlight-active, .sf-dump-str.sf-dump-highlight-active, .sf-dump-key.sf-dump-highlight-active { background: rgba(253, 175, 0, 0.4); border: 1px solid #ffa500; border-radius: 3px; } .phpdebugbar pre.sf-dump .sf-dump-search-hidden { display: none !important; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper { font-size: 0; white-space: nowrap; margin-bottom: 5px; display: flex; position: -webkit-sticky; position: sticky; top: 5px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > * { vertical-align: top; box-sizing: border-box; height: 21px; font-weight: normal; border-radius: 0; background: #FFF; color: #757575; border: 1px solid #BBB; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > input.sf-dump-search-input { padding: 3px; height: 21px; font-size: 12px; border-right: none; border-top-left-radius: 3px; border-bottom-left-radius: 3px; color: #000; min-width: 15px; width: 100%; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next, .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-previous { background: #F2F2F2; outline: none; border-left: none; font-size: 0; line-height: 0; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next { border-top-right-radius: 3px; border-bottom-right-radius: 3px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-next > svg, .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-input-previous > svg { pointer-events: none; width: 12px; height: 12px; } .phpdebugbar pre.sf-dump .sf-dump-search-wrapper > .sf-dump-search-count { display: inline-block; padding: 0 5px; margin: 0; border-left: none; line-height: 21px; font-size: 12px; }.phpdebugbar pre.sf-dump, .phpdebugbar pre.sf-dump .sf-dump-default{word-wrap: break-word; white-space: pre-wrap; word-break: normal}.phpdebugbar pre.sf-dump .sf-dump-num{font-weight:bold; color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-const{font-weight:bold}.phpdebugbar pre.sf-dump .sf-dump-str{font-weight:bold; color:#3A9B26}.phpdebugbar pre.sf-dump .sf-dump-note{color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-ref{color:#7B7B7B}.phpdebugbar pre.sf-dump .sf-dump-public{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-protected{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-private{color:#000000}.phpdebugbar pre.sf-dump .sf-dump-meta{color:#B729D9}.phpdebugbar pre.sf-dump .sf-dump-key{color:#3A9B26}.phpdebugbar pre.sf-dump .sf-dump-index{color:#1299DA}.phpdebugbar pre.sf-dump .sf-dump-ellipsis{color:#A0A000}.phpdebugbar pre.sf-dump .sf-dump-ns{user-select:none;}.phpdebugbar pre.sf-dump .sf-dump-ellipsis-note{color:#1299DA}</style>
+</head>
+<!-- END: Head -->
+<body class="py-5">
+
+
+
+    <!-- BEGIN: Mobile Menu -->
+    <!-- BEGIN: Mobile Menu -->
+<div class="mobile-menu md:hidden">
+    <div class="mobile-menu-bar">
+
+
+                    
+            
+                <a href="" class="flex mr-auto">
+                    <img alt="Agency Logo" class="w-6" src="http://192.168.10.12/uploads/settings/1_theG1690183138.png">
+                </a>
+
+            
+
+        
+
+        <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+    </div>
+
+    <div class="scrollable">
+        <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="x-circle" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+        <ul class="scrollable__content py-2">
+
+            <li>
+                <a href="/home" class="menu">
+                    <div class="menu__icon"> <i data-lucide="home"></i> </div>
+                    <div class="menu__title"> Dashboard </div>
+                </a>
+            </li>
+            <li class="menu__devider my-6"></li>
+
+            
+                <li>
+                    <a href="/my-portal" class="menu">
+                        <div class="menu__icon"> <i data-lucide="bookmark"></i> </div>
+                        <div class="menu__title"> My Grades</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/student-enroll" class="menu">
+                        <div class="menu__icon"> <i data-lucide="bookmark"></i> </div>
+                        <div class="menu__title"> Enrollment </div>
+                    </a>
+                </li>
+
+                                    <li>
+                        <a href="http://192.168.10.12/enroll/enrolled-list" class="menu">
+                            <div class="menu__icon"> <i data-lucide="bookmark"></i> </div>
+                            <div class="menu__title"> Applicant List </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://192.168.10.12/students" class="menu">
+                            <div class="menu__icon"> <i data-lucide="bookmark"></i> </div>
+                            <div class="menu__title"> Students (e-SMS) </div>
+                        </a>
+                    </li>
+
+                
+                <li>
+                    <a href="javascript:;" class="side-menu side-menu--">
+                         <div class="side-menu__icon"><i data-lucide="bookmark"></i></div>
+                       <div class="side-menu__title">
+                             Online Request
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                         </div>
+                    </a>
+
+                 <ul class="side-menu__">
+
+                    <li>
+                         <a href="http://192.168.10.12/onlinerequest/dashboard/student/dashboard" class="side-menu side-menu--">
+                           <i class="fa-solid fa-house-user"></i>
+                             <div class="side-menu__title"> My Dashboard</div>
+                         </a>
+                     </li>
+
+
+                  
+                     <li>
+                         <a href="http://192.168.10.12/onlinerequest/dashboard/dashboard" class="side-menu side-menu--">
+                           <i class="fa-solid fa-gauge-high"></i>
+                             <div class="side-menu__title"> Dashboard</div>
+                         </a>
+                      </li>
+
+
+                    <li>
+                         <a href="http://192.168.10.12/onlinerequest/dashboard/manage_or" class="side-menu side-menu--">
+                        <i class="fa-solid fa-gear"></i>
+                             <div class="side-menu__title">Manage OR</div>
+                         </a>
+                     </li>
+
+
+                 
+                    </ul>
+
+                </li>
+
+
+
+
+                <!-- BEGIN:: APPLICATION -->
+
+
+
+
+
+
+                <!-- BEGIN:: APPLICATION -->
+
+                <!-- BEGIN:: APPLICATION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- END:: APPLICATION -->
+
+                <!-- BEGIN:: ADMIN -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- END::   ADMIN -->
+
+                <!-- BEGIN:: DOCUMENTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- END::   DOCUMENTS -->
+
+                <!-- BEGIN:: DTR -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: DTR -->
+
+                <!-- BEGIN:: HIRING -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: HIRING -->
+
+                <!-- BEGIN:: INTERVIEW/RATING -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: INTERVIEW/RATING -->
+
+                <!-- BEGIN:: COMPETENCY -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: COMPETENCY -->
+
+                <!-- BEGIN:: REWARDS/RECOGNITION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: REWARDS/RECOGNITION -->
+
+                <!-- BEGIN:: TRAVEL ORDER -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: TRAVEL ORDER -->
+
+                <!-- BEGIN:: PAYROLL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: PAYROLL -->
+
+                <!-- BEGIN:: LEAVE APPLICATION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: LEAVE APPLICATION -->
+
+                <!-- BEGIN:: SALN -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: SALN -->
+
+                <!-- BEGIN:: IDP -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- BEGIN:: IDP -->
+
+            
+        </ul>
+    </div>
+</div>
+<!-- END: Mobile Menu -->
+    <!-- END: Mobile Menu -->
+
+
+    <div class="flex mt-[4.7rem] md:mt-0">
+        <!-- BEGIN: Side Menu -->
+    <nav class="side-nav">
+<a href="/" class="intro-x flex items-center pl-5 py-4">
+
+
+
+                
+                <div class="w-10 h-10 rounded-full overflow-hidden shadow-lg image-fit zoom-in ml-5"><img alt="logo" src=" http://192.168.10.12/uploads/settings/1_theG1690183138.png"></div>
+
+        
+                    <span class="text-white text-lg ml-3"> ASIS - Student Portal</span>
+        
+        
+
+</a>
+<ul>
+
+    
+                <li>
+            <a href="/home" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
+                <div class="side-menu__title">
+                    Dashboard
+                </div>
+            </a>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li>
+            <a href="/my-portal" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    My Grades
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="/student-enroll" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    Enrollment
+                </div>
+            </a>
+        </li>
+
+            <li>
+            <a href="http://192.168.10.12/enroll/enrolled-list" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    Applicant List
+                </div>
+            </a>
+        </li>
+    
+
+
+
+            <!-- BEGIN: Student List -->
+        <li>
+            <a href="http://192.168.10.12/students" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    Students (e-SMS)
+                </div>
+            </a>
+        </li>
+        <!-- END: Student List -->
+        
+
+
+
+           <li>
+               <a href="javascript:;" class="side-menu side-menu--">
+                    <div class="side-menu__icon"><i data-lucide="bookmark"></i></div>
+                  <div class="side-menu__title">
+                        Online Request
+                       <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                    </div>
+               </a>
+
+            <ul class="side-menu__">
+
+               <li>
+                    <a href="http://192.168.10.12/onlinerequest/dashboard/student/dashboard" class="side-menu side-menu--">
+                      <i class="fa-solid fa-house-user"></i>
+                        <div class="side-menu__title"> My Dashboard</div>
+                    </a>
+                </li>
+
+
+             
+                <li>
+                    <a href="http://192.168.10.12/onlinerequest/dashboard/dashboard" class="side-menu side-menu--">
+                      <i class="fa-solid fa-gauge-high"></i>
+                        <div class="side-menu__title"> Dashboard</div>
+                    </a>
+                 </li>
+
+
+               <li>
+                    <a href="http://192.168.10.12/onlinerequest/dashboard/manage_or" class="side-menu side-menu--">
+                   <i class="fa-solid fa-gear"></i>
+                        <div class="side-menu__title">Manage OR</div>
+                    </a>
+                </li>
+
+
+            
+               </ul>
+
+           </li>
+
+    </li>
+        <li style="display: none">
+            <a href="/chat" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                <div class="side-menu__title">
+                    Chat
+                </div>
+                <div id="load_unread_messages">
+
+                </div>
+            </a>
+        </li>
+
+        <!-- BEGIN: Admin -->
+        <li style="display: none">
+            <a href="javascript:;" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="settings"></i> </div>
+                <div class="side-menu__title">
+                    Admin
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+
+
+            <ul class="side-menu__">
+
+                <li>
+                    <a href="/admin/ac" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Account Management</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://192.168.10.12/admin/document-settings" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Document Settings</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/rc" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Responsibility Center</div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="/admin/group" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Groups</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/user-privileges" class="side-menu side-menu--">
+                    <a href="/admin/user-privileges" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">User Privileges</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://192.168.10.12/admin/link-list" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Link List</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://192.168.10.12/admin/ss" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">System Settings</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://192.168.10.12/admin/mail/settings" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Mail Settings</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://192.168.10.12/students" class="side-menu side-menu--">
+                        <i data-lucide="settings"></i>
+                        <div class="side-menu__title">Student List</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <!-- END: Admin -->
+
+        <li style="display: none">
+            <a href="/article/my-article" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    Article
+                </div>
+            </a>
+        </li>
+
+         <!-- BEGIN: Set Semester Sched -->
+            <li style="display: none">
+                <a href="http://192.168.10.12/sem/semestral/sched/view" class="side-menu side-menu--">
+                    <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                    <div class="side-menu__title">
+                         Semestral Sched
+                    </div>
+                </a>
+            </li>
+        <!-- BEGIN: Set Semester Sched -->
+
+         <!-- BEGIN: My Signature -->
+         <li style="">
+            <a href="http://192.168.10.12/signature/my-sinature" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                     My Signature
+                </div>
+            </a>
+        </li>
+        <!-- END: My Signature -->
+
+                <!-- BEGIN: Application -->
+
+
+        <!-- Begin: Voting -->
+        <li>
+            <a href="javascript:;" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="users"></i> </div>
+                <div class="side-menu__title">
+                    Elections
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+
+            <ul class="side-menu__">
+
+                                    <li>
+                        <a href="http://192.168.10.12/vote/voting-type" class="side-menu side-menu--">
+                            <i class="fa-solid fa-user-plus -mt-1"></i>
+                            <div class="side-menu__title">Voting Type</div>
+                        </a>
+                    </li>
+
+                    <li>
+                            <a href="http://192.168.10.12/vote/voting-position" class="side-menu side-menu--">
+                                <i class="fa-solid fa-user-plus -mt-1"></i>
+                                <div class="side-menu__title"> Voting Position </div>
+                            </a>
+                    </li>
+
+                    <li>
+                        <a href="http://192.168.10.12/vote/election-parties" class="side-menu side-menu--">
+                            <i class="fa-solid fa-user-plus -mt-1"></i>
+                            <div class="side-menu__title"> Candidate Parties </div>
+                        </a>
+                    </li>
+                
+               <li style="display: none">
+                    <a href="http://192.168.10.12/vote/election-registration" class="side-menu side-menu--">
+                        <i class="fa-solid fa-user-plus -mt-1"></i>
+                        <div class="side-menu__title"> Registration </div>
+                    </a>
+                </li>
+
+               <li>
+                    <a href="http://192.168.10.12/vote/election-application" class="side-menu side-menu--">
+                        <i class="fa-solid fa-user-plus -mt-1"></i>
+                        <div class="side-menu__title"> Election Application </div>
+                    </a>
+                </li>
+
+
+               <li>
+                   <a href="http://192.168.10.12/vote/election-participants" class="side-menu side-menu--">
+                    <i class="fas fa-vote-yea"></i>
+                       <div class="side-menu__title">Vote</div>
+                   </a>
+               </li>
+                <li>
+                    <a href="http://192.168.10.12/vote/election-result" class="side-menu side-menu--">
+                    <i class="fas fa-vote-yea"></i>
+                        <div class="side-menu__title">Result</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <!-- END: Voting -->
+
+        <!-- BEGIN: Subsidary Ledger -->
+        <li>
+            <a href="javascript:;" class="side-menu side-menu--">
+                <div class="side-menu__icon"><i class="fa-solid fa-book"></i></div>
+                <div class="side-menu__title">
+                    My Ledger
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+
+            <ul class="side-menu__">
+               <li>
+                    <a href="http://192.168.10.12/student_ledger/my/ledger" class="side-menu side-menu--">
+                        <i class="fa-solid fa-clipboard-user"></i>
+                        <div class="side-menu__title"> Subsidiary Ledger</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- END: Subsidary Ledger -->
+
+        <!-- BEGIN: Subsidary Ledger -->
+        <li>
+            <a href="javascript:;" class="side-menu side-menu--">
+                <div class="side-menu__icon"><i data-lucide="book"></i></div>
+                <div class="side-menu__title">
+                        Academic Records
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+
+            <ul class="side-menu__">
+               <li>
+                    <a href="http://192.168.10.12/academic-records" class="side-menu side-menu--">
+                        <i data-lucide="book-open"></i>
+                        <div class="side-menu__title">Transcript</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- END: Subsidary Ledger -->
+
+        <li>
+            <a href="/curriculum" class="side-menu side-menu--">
+                <div class="side-menu__icon"> <i data-lucide="bookmark"></i> </div>
+                <div class="side-menu__title">
+                    Curriculum
+                </div>
+            </a>
+        </li>
+
+        <!-- BEGIN: Application -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Application -->
+
+
+        <!-- BEGIN: MY CLEARANCE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- END: MY CLEARANCE -->
+
+        <!-- END: MY CLEARANCE -->
+
+
+        <!-- BEGIN: DOCUMENTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: DOCUMENTS -->
+
+
+        <!-- BEGIN: DTR -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: DTR -->
+
+        <!-- BEGIN: Hiring -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Hiring -->
+
+
+            
+            <!-- END: Interview -->
+
+        <!-- BEGIN: Employment Testing -->
+        
+        <!-- END: Testing -->
+
+        <!-- BEGIN: Rating -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Rating -->
+
+        <!-- BEGIN: Competency -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Competency -->
+
+
+        <!-- BEGIN: Rewards -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Rewards -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+</nav>
+    <!-- END: Side Menu -->
+
+
+    <!-- BEGIN: Content -->
+    <div class="content">
+    <!-- BEGIN: Top Bar -->
+    <div class="top-bar">
+    <!-- BEGIN: Breadcrumb -->
+    <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+        <ol class="breadcrumb">
+
+
+
+
+                <ol class="breadcrumb">
+        
+                            <li class="breadcrumb-item"><a href="http://192.168.10.12/home">Dashboard</a></li>
+            
+        
+                            <li class="breadcrumb-item active">My Profile</li>
+            
+            </ol>
+
+
+
+        </ol>
+    </nav>
+    <!-- END: Breadcrumb -->
+
+    <!-- BEGIN: Search -->
+    <div class="intro-x relative mr-3 sm:mr-6">
+
+        <div id="append_global_notification">
+
+        </div>
+        
+
+    </div>
+    <!-- END: Search -->
+
+    <div class="intro-x dropdown mr-auto sm:mr-6">
+        <div class="font-medium "><span class="text-secondary text-s"></span>
+            <span class="text-primary">Admin Admin</span>
+            <span class="text-primary mr-2">
+                            </span>
+            <span class="text-secondary text-xs">(Admin)</span> </div>
+</div>
+   
+            <!-- BEGIN: Notifications -->
+                <div id="__notification" class="intro-x dropdown mr-auto sm:mr-6 __notification">
+
+                <div class="__notification_bell_div">
+                                            <div class="__notificationBell dropdown-toggle notification cursor-pointer" role="button" aria-expanded="false" data-tw-toggle="dropdown"> <i class="fa fa-bell notification__icon dark:text-slate-500"></i> </div>
+                                    </div>
+                <div class="notification-content pt-2 dropdown-menu ">
+                    <div class="notification-content__box dropdown-content overflow-y-auto h-half-screen">
+                    <div class="grid grid-cols-2">
+
+                                                    <div class="notification-content__title">No Notifications yet</div>
+                                            </div>
+
+
+                    <!-- BEGIN: Document Notifications -->
+                    <div class="load_document_notifications">
+                    </div>
+
+                    <!-- BEGIN: Applicants Notifications -->
+                    <div class="load_panel_notif">
+                    </div>
+
+                    <!-- END:   Applicants Notifications -->
+                    <!-- END:   Document Notifications -->
+                    <div class="__notification_div">
+                    </div>
+
+                    <!-- BEGIN: AMANTE  NOTIFY APPLICANT Notifications -->
+                    <div class="__hired_notif_div">
+
+                    </div>
+
+                    <div class="_seleted_notification">
+
+                    </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- END: Notifications -->
+    
+
+
+    <!-- BEGIN: Account Menu -->
+    <div class="intro-x dropdown w-8 h-8">
+        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in" role="button" aria-expanded="false" data-tw-toggle="dropdown">
+            <img alt="" src="http://192.168.10.12/uploads/settings/1_theG1690183138.png">
+        </div>
+        <div class="dropdown-menu w-56">
+            <ul class="dropdown-content bg-primary text-white">
+
+                                                          <li class="p-2">
+                            <div class="font-medium">JAY EUGENE VANN ESPINOSA</div>
+                            <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">2014-0476 </div>
+                        </li>
+                    
+                    <hr class="dropdown-divider border-white/[0.08]">
+
+                    <li>
+                        <a href="http://192.168.10.12/my/profile" class="dropdown-item hover:bg-white/5"> <i data-lucide="user" class="w-4 h-4 mr-2"></i> My Profile </a>
+                    </li>
+
+
+               
+                                <li>
+                    <hr class="dropdown-divider border-white/[0.08]">
+                </li>
+                <li>
+                    <!--<a  href="http://192.168.10.12/logout"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                        class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>-->
+                    <a  href="http://192.168.10.12/my/logout" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                    <form id="logout-form" action="http://192.168.10.12/my/logout" method="POST" class="d-none">
+                        <input type="hidden" name="_token" value="Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ">                    </form>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- END: Account Menu -->
+
+</div>
+
+
+<!-- BEGIN: Applicants Notification Content -->
+<div id="applicants_notification_mdl" data-tw-backdrop="static"  class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="intro-y col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="box">
+                        <div class="flex items-start px-5 pt-5">
+                            <div class="w-full flex flex-col lg:flex-row items-center">
+                                <div class="w-16 h-16 image-fit">
+                                    <img id="mdl_notif_profile_pic" alt="Profile Picture" class="rounded-full" src="">
+                                </div>
+                                <div class="lg:ml-4 text-center lg:text-left mt-3 lg:mt-0">
+                                    <div class="flex items-center justify-center lg:justify-start">                 <span class="font-medium" id="mdl_notif_full_name"></span> </div>
+                                    <div class="flex items-center justify-center lg:justify-start">                 <span class="font-medium" id="mdl_notif_desig_pos"></span> </div>
+                                    <div class="flex items-center justify-center lg:justify-start text-slate-500 "><span id="mdl_notif_email"></span> </div>
+                                </div>
+                            </div>
+                            <div class="absolute right-0 top-0 mr-5 mt-3 dropdown">
+                                <a class="w-5 h-5 block close_applicants_notif_mdl" href="javascript:;" data-tw-dismiss="modal"> <i data-lucide="x" class="w-5 h-5 text-slate-500"></i> </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center lg:text-left p-5 font-medium">
+                            <div class="position_div">Position: <span class="ml-2" id="mdl_notif_position"></span> </div>
+                        </div>
+
+                        <div class="text-center text-justify p-5 border-t border-slate-200/60 dark:border-darkmode-400">
+                            <div id="mdl_notif_content"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5 text-center border-t border-slate-200/60 dark:border-darkmode-400">  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Applicants Notification Content -->
+
+
+<!-- BEGIN: Modal Content on the position hiring  -->
+<div id="notif_click_info" class="modal" data-tw-backdrop="static" tabindex="-1" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-body p-0">
+                 <div class="text-center">
+                    <div class="intro-y col-span-12 md:col-span-6 lg:col-span-4">
+                            <div class="flex items-start px-5 pt-5">
+                                <div class="w-full flex flex-col lg:flex-row items-center">
+                                    <div  class="w-16 h-16 image-fit">
+                                        <img  id="notif_image" alt="Midone - HTML Admin Template" class="rounded-full" src="">
+                                    </div>
+                                    <div class="lg:ml-4 text-center lg:text-left mt-3 lg:mt-0">
+                                        <a id="notif_name_id" href="" class="font-medium"></a>
+                                        <div class="text-slate-500 text-xs mt-0.5"><i class="fa fa-briefcase text-dark w-3 h-3"></i> <span id="position_notif" class="ml-1 font-medium "></span></div>
+                                        <div class="text-slate-500 text-xs mt-0.5"><i class="fa fa-envelope text-dark w-3 h-3"></i><span id="email" class="ml-2 font-medium "></span></div>
+                                    </div>
+                                    <div id="notif_time" class="text-xs text-slate-400 ml-auto whitespace-nowrap"></div>
+                                </div>
+                            </div>
+                            <div class="w-full border-t border-slate-200/60 dark:border-darkmode-400 mt-2"></div>
+                            <div class="text-center lg:text-left p-5">
+                                <div id="notif_info_content" class="ml-2 font-medium mt-1"></div>
+                            </div>
+                            <div class="text-center lg:text-right p-5">
+                                <div class="absolute top-0 right-0"><button id="notif_cancel"><i class="fa fa-circle-xmark w-5 h-5 text-danger mr-2 mt-1"></i></button></div>
+                            </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+<!-- END: Modal Content of the position hiring -->
+
+<!-- KANG ROY NI-->
+<!-- BEGIN:  Modal Content on the hired applicant  -->
+<div id="notif_hired_Applicant" class="modal" data-tw-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="text-center">
+                   <div class="intro-y col-span-12 md:col-span-6 lg:col-span-4">
+                           <div class="flex items-start px-5 pt-5">
+                               <div class="w-full flex flex-col lg:flex-row items-center">
+                                   <div  class="w-16 h-16 image-fit">
+                                       <img  id="sender_image" alt="Midone - HTML Admin Template" class="rounded-full" src="">
+                                   </div>
+                                   <div class="lg:ml-4 text-center lg:text-left mt-3 lg:mt-0">
+                                       <a id="sender_name" href="" class="font-medium"></a>
+                                       <div class="text-slate-500 text-xs mt-0.5"><i class="fa fa-briefcase text-dark w-3 h-3"></i> <span id="sender_position" class="ml-1 font-medium "></span></div>
+                                       <div class="text-slate-500 text-xs mt-0.5"><i class="fa fa-envelope text-dark w-3 h-3"></i><span id="sender_email" class="ml-2 font-medium "></span></div>
+                                   </div>
+                                   <div id="time_sent" class="text-xs text-slate-400 ml-auto whitespace-nowrap"></div>
+                               </div>
+                           </div>
+                           <div class="w-full border-t border-slate-200/60 dark:border-darkmode-400 mt-2"></div>
+                           <div class="text-center lg:text-left p-5">
+                               <div id="notif_content" class="ml-2 font-medium mt-1"></div>
+                           </div>
+                           <div class="text-center lg:text-right p-5">
+                               <div class="absolute top-0 right-0 closeHired_modal"><a  href="javascript:;" data-tw-dismiss="modal"><i data-lucide="x" class="w-5 h-5 text-slate-500"></i></a></div>
+                           </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Modal Content of the hired applicant -->
+<!-- NUMANA KANG ROY NI-->
+
+    <!-- END: Top Bar -->
+
+
+            <div class="intro-y flex items-center mt-8">
+        <h2 class="text-lg font-medium mr-auto">
+            My Profile
+        </h2>
+    </div>
+    <!-- BEGIN: Profile Info -->
+    <div class="intro-y box px-5 pt-5 mt-5">
+        <div class="flex flex-col lg:flex-row border-b border-slate-200/60 dark:border-darkmode-400 pb-5 -mx-5">
+            <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
+
+                <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
+                    <div id="profile_pic_div" class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
+
+                    </div>
+                </div>
+                <div id="profile_name" class="ml-5"></div>
+            </div>
+            <div class="mt-6 lg:mt-0 flex-1 px-5 border-l border-r border-slate-200/60 dark:border-darkmode-400 border-t lg:border-t-0 pt-5 lg:pt-0">
+                <div class="font-medium text-center lg:text-left lg:mt-3">Contact Details</div>
+                <div class="flex flex-col justify-center items-center lg:items-start mt-4">
+
+                    <div class="truncate sm:whitespace-normal flex items-center"> <i class="fa-regular fa-envelope w-4 h-4 mr-2"></i> <span class="profile_student_email"></span> </div>
+                    <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i class="fa-solid fa-mobile-screen w-4 h-4 mr-2"></i> <span class="profile_student_contact"></span> </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BEGIN: Tab Pane -->
+            <ul class="nav nav-link-tabs flex-col sm:flex-row justify-center lg:justify-start text-center" role="tablist" >
+
+                <li id="account-tab" class="nav-item" role="presentation">
+                    <a href="javascript:;" class="nav-link py-4 flex items-center active" data-tw-target="#account_settings" aria-selected="true" role="tab" > <i class="w-4 h-4 mr-2" data-lucide="settings"></i> Account Settings </a>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+        </ul>
+        <!-- END: Tab Pane -->
+
+    </div>
+
+    <!-- END: Profile Info -->
+
+    <div class="tab-content mt-5">
+
+        <!-- BEGIN: Personal Information -->
+        <div id="personal_info_tab" class="tab-pane active" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="grid grid-cols-12 gap-6">
+                <div class="intro-y box col-span-12 lg:col-span-12">
+                    <div class="flex items-center px-5 py-5 sm:py-3 border-b border-slate-200/60 dark:border-darkmode-400">
+                        <h2 class="font-medium text-base mr-auto">
+                            Account Settings
+                        </h2>
+                        <a id="btn_save_account_settings" href="javascript:;" class="btn btn-primary  mr-2 mb-2"> <i data-lucide="save" class="w-4 h-4 mr-2"></i> Update Account </a>
+                    </div>
+                    <div class="p-5 grid grid-cols-12 gap-6">
+                        <div class="input-form col-span-12 lg:col-span-6">
+                            <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row"> Email </label>
+                            <input disabled id="account_email" type="email" name="account_email" class="form-control" placeholder="juan.delacruz@gmail.com" required autocomplete="off">
+                        </div>
+                        <div class="input-form col-span-12 lg:col-span-6">
+                            <label for="validation-form-3" class="form-label w-full flex flex-col sm:flex-row"> Password <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 8 characters</span> </label>
+
+
+                            <div class="input-group mt-2">
+                                <input id="account_password" type="password" name="account_pass" class="form-control" placeholder="Password" minlength="4" required>
+                                <div id="input-group-price" class="input-group-text"><input id="btn_show_pass" class="form-check-input" type="checkbox" value=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BEGIN: Account Settings -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Account Settings -->
+
+        <!-- BEGIN: Electronic Signatures Settings -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- END: Electronic Signatures Settings -->
+
+        <!-- END: BUTTON SAVE PDS-->
+    </div>
+
+
+
+
+
+
+
+
+    <div id="update_profile_picture_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form class="modal-content" id="form_profile_picture" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ">
+
+
+
+            <div class="modal-body p-0">
+
+
+
+                        <input id="current_profile_picture_value" name="current_profile_picture_value" class="hidden">
+
+
+
+
+
+
+
+
+
+                <div class="box">
+                    <div class="p-5">
+                        <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row"> Upload profile picture <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Maximum of 5 MB</span> </label>
+                        <input id="up_profile_pic"
+                               type="file"
+                               class="filepond mt-1"
+                               name="up_profile_pic[]"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="btn_save_profile_pic" type="submit" class="btn btn-primary w-20">Update</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<div id="add_e_signature_mdl" class="modal" data-tw-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+
+        <form class="modal-content" id="form_e_signature" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="_token" value="Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ">            <div class="modal-body px-5 py-5">
+
+                <input id="old_e_signature_value" name="old_e_signature_value" class="hidden">
+
+                <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row"> Upload your E-Signature <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Required PNG Format, Maximum of 1MB)</span> </label>
+                <input id="e_signature" name="e_signature" type="file"  class="filepond mt-1">
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button type="submit" class="btn btn-primary w-20">Save</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!-- END: Modal Content -->
+
+<div id="delete_e_sig_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete these E-Signature? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_e_sig_mdl" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_educ_bg_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Add Educational Background</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+                    <input id="academic_id" class="hidden">
+                    <input id="acad_level" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Level  </label>
+                        <select class="select2 w-full" id="educ_bg_level">
+                            <option value="ELEMENTARY">Elementary</option>
+                            <option value="SECONDARY">Secondary</option>
+                            <option value="VOCATIONAL TRADE COURSE">Vocational/Trade Course</option>
+                            <option value="COLLEGE">College</option>
+                            <option value="GRADUATE STUDIES">Graduate Studies</option>
+                        </select>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> School Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Write in full)</span> </label>
+                        <input id="educ_school_name" style="text-transform:uppercase"  type="text" name="educ_school_name" class="form-control" placeholder="School Name" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> From <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Period of attendance)</span> </label>
+
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="educ_school_from" type="text" class="form-control pl-12 ">
+                        </div>
+
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> To <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Period of attendance)</span> </label>
+
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="educ_school_to" type="text" class="form-control pl-12 ">
+                        </div>
+
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Basic Education/Degree/Course <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Write in full)</span> </label>
+                        <input id="educ_degree_course" style="text-transform:uppercase"  type="text" name="educ_degree_course" class="form-control" placeholder="Basic Education/Degree/Course" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Highest Level/Units Earned <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(If not graduated)</span> </label>
+                        <input id="educ_highest_level_earned" style="text-transform:uppercase"  type="text" name="educ_highest_level_earned" class="form-control" placeholder="Highest Level/Units Earned" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Year Graduated </label>
+
+
+                        <input id="educ_year_graduated" style="text-transform:uppercase"  type="text" name="educ_year_graduated" class="form-control" placeholder="Year Graduated" minlength="2" required autocomplete="off">
+
+                        
+
+
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Scholarship/Academic Honors Received </label>
+                        <input id="educ_scholarship" style="text-transform:uppercase"  type="text" name="educ_scholarship" class="form-control" placeholder="Scholarship/Academic Honors Received" minlength="2" required autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="add_educ_bg" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="update_educ_bg" type="submit" class="btn btn-primary w-20">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="delete_educ_bg_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_academic_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_educ_bg" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_civil_service_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Civil Service</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+                    <input id="cs_eligibility_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Eligibity Type  </label>
+                        <select class="select2 w-full" id="cs_type">
+                                                            <option value="CAREER SERVICE">CAREER SERVICE</option>
+                                                            <option value="RA 1080 (BOARD/ BAR) UNDER SPECIAL LAWS">RA 1080 (BOARD/ BAR) UNDER SPECIAL LAWS</option>
+                                                            <option value="CES">CES</option>
+                                                            <option value="CSEE">CSEE</option>
+                                                            <option value="BARANGAY ELIGIBILITY">BARANGAY ELIGIBILITY</option>
+                                                            <option value="DRIVERS LICENSE">DRIVERS LICENSE</option>
+                                                            <option value="HONOR GRADUATE ELIGIBILITY (PD 907)">HONOR GRADUATE ELIGIBILITY (PD 907)</option>
+                            
+
+
+
+
+
+                        </select>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Rating <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(if Applicable)</span> </label>
+                        <input id="cs_rating" type="text" style="text-transform:uppercase"  name="cs_rating" class="form-control" placeholder="Ex: Rating or N/A if not applicable" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Date of Examination/Conferment </label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="cs_date_exam" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Place of Exam/Conferment </label>
+                        <input id="cs_place_exam" style="text-transform:uppercase"  type="text" name="cs_place_exam" class="form-control" placeholder="Place of Exam/Conferment" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> License Number <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(if Applicable)</span> </label>
+                        <input id="cs_license_number" style="text-transform:uppercase"  type="text" name="cs_license_number" class="form-control" placeholder="Ex: License Number or N/A if not applicable" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Date of Validity <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(if Applicable)</span> </label>
+
+                        <input id="cs_date_validity" type="text" style="text-transform:uppercase"  name="cs_date_validity" class="form-control" placeholder="mm/dd/yyyy or N/A" minlength="2" required autocomplete="off">
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_cancel_cs_eligibility" type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="btn_save_civil_service" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="btn_update_cs" type="submit" class="btn btn-primary w-20 hidden">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="delete_cs_eligibility_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_cs_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_cs_eligibility" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_work_exp_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Work Experience</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+                    <input id="work_exp_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates (From)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="work_exp_date_from" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates (To)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="work_exp_date_to" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Position Title </label>
+                        <input id="work_exp_pos_title" style="text-transform:uppercase"  type="text" name="work_exp_pos_title" class="form-control" placeholder="Position Title" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Department/Agency/Office/Company </label>
+                        <input id="work_exp_dept_agency" style="text-transform:uppercase"  type="text" name="work_exp_dept_agency" class="form-control" placeholder="Department/Agency/Office/Company" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Monthly Salary </label>
+                        <input id="work_exp_sal" type="number" name="work_exp_sal" class="form-control" placeholder="Monthly Salary" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Salary/Job/Pay Grade <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(if Applicable) & STEP (Format "00-0")/INCREMENT</span> </label>
+                        <input id="work_exp_sg" type="text" style="text-transform:uppercase"  name="work_exp_sg" class="form-control" placeholder="Salary/Job/Pay Grade" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Status of Appointment </label>
+                        <input id="work_exp_status" style="text-transform:uppercase"  type="text" name="work_exp_status" class="form-control" placeholder="Status of Appointment" minlength="2" required autocomplete="off">
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Government Service  </label>
+                        <select class="select2 w-full" id="work_exp_govt_service">
+                            <option value="YES">YES</option>
+                            <option value="NO">NO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_cancel_add_work_exp" type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="save_work_exp" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="edit_work_exp" type="submit" class="btn btn-primary w-20">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="delete_work_exp_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_work_exp_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_work_exp" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_voluntary_work_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Voluntary Work or Involvement in Civic / Non-Government / People / Voluntary Organization/s</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+                    <input id="vol_work_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Name & Address of Organization</label>
+                        <input id="vol_work_org_name" type="text" style="text-transform:uppercase" name="vol_work_org_name" class="form-control" placeholder="Name & Address of Organization" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates (From)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="vol_work_date_from" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates (To)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="vol_work_date_to" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Number of Hours </label>
+                        <input id="vol_work_hr_number" type="number" name="vol_work_hr_number" class="form-control" placeholder="Number of Hours" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Position/ Nature of Work </label>
+                        <input id="vol_work_nature" type="text" style="text-transform:uppercase" name="vol_work_nature" class="form-control" placeholder="Position/ Nature of Work" minlength="2" required autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_cancel_add_vol_work" type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="save_voluntary_work" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="edit_vol_work" type="submit" class="btn btn-primary w-20">Update</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="delete_voluntary_work_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_vol_work_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_voluntary_work" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_LD_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Learning and Development (L&D) Interventions/Training Programs Attended</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+                    <input id="ld_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Title of Learning and Development Interventions/Training Programs <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Write in full)</span> </label>
+                        <input id="ld_title" type="text" name="ld_title" style="text-transform:uppercase" class="form-control" placeholder="Title of Learning and Development Interventions/Training Programs" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates of Attendance (From)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="ld_date_from" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Inclusive Dates of Attendance (To)</label>
+                        <div class="relative w-auto mx-auto">
+                            <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                            </div> <input id="ld_date_to" type="text" class="form-control pl-12 ">
+                        </div>
+                    </div>
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Number of Hours </label>
+                        <input id="ld_hr_number" type="number" name="ld_hr_number" class="form-control" placeholder="Number of Hours" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Type of LD <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Managerial/Supervisory/Technical/etc.)</span> </label>
+                        <select class="select2 w-full" id="ld_type">
+                            <option value="MANAGERIAL">MANAGERIAL</option>
+                            <option value="SUPERVISORY">SUPERVISORY</option>
+                            <option value="TECHNICAL">TECHNICAL</option>
+                            <option value="OTHERS">OTHERS</option>
+                        </select>
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-6">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Conducted/Sponsored By </label>
+                        <input id="ld_sponsored_by" type="text" style="text-transform:uppercase" name="ld_sponsored_by" class="form-control" placeholder="Conducted/Sponsored By" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div id="div_if_others" class="input-form col-span-12 lg:col-span-6">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn_cancel_add_ld" type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="save_LD" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="edit_ld" type="submit" class="btn btn-primary w-20">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="delete_ld_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_ld_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_learning_dev" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="add_other_info_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">Other Information</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+                    <input id="special_skills_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Special Skills and Hobbies </label>
+                        <input id="others_skills" type="text" style="text-transform:uppercase" name="others_skills" class="form-control" placeholder="Special Skills and Hobbies / N/A if not applicable" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Non-Academic Distinctions/Recognition <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Write in full)</span> </label>
+                        <input id="others_distinction" type="text" style="text-transform:uppercase" name="others_distinction" class="form-control" placeholder="Non-Academic Distinctions/Recognition" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Membership in Association/Organization  </label>
+                        <input id="others_membership" type="text" style="text-transform:uppercase" name="others_membership" class="form-control" placeholder="Membership in Association/Organization" minlength="2" required autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="save_other_info" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="update_other_info" type="submit" class="btn btn-primary w-20">Update</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="delete_other_info_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_other_info_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_special_skills" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="add_references_mdl" data-tw-backdrop="static" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="font-medium text-base mr-auto">References</h2>
+            </div>
+
+            <div class="modal-body p-0">
+
+                <div class="p-5 grid grid-cols-12 gap-6">
+
+
+                    <input id="reference_input_id" class="hidden">
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Full Name </label>
+                        <input id="ref_name" type="text" style="text-transform:uppercase" name="ref_name" class="form-control" placeholder="Full Name" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Address <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">(Write in full)</span> </label>
+                        <input id="ref_address" type="text" style="text-transform:uppercase" name="ref_address" class="form-control" placeholder="Address" minlength="2" required autocomplete="off">
+                    </div>
+
+                    <div class="input-form col-span-12 lg:col-span-12">
+                        <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row"> Telephone Number </label>
+                        <input id="ref_tel_no" type="text" style="text-transform:uppercase" name="ref_tel_no" class="form-control" placeholder="Telephone Number" minlength="2" required autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                <button id="save_ref_info" type="submit" class="btn btn-primary w-20">Add</button>
+                <button id="update_ref_info" type="submit" class="btn btn-primary w-20">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="delete_references_mdl" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+
+                <input id="mdl_references_input_id" class="hidden">
+
+                <div class="p-5 text-center"> <i data-lucide="x-circle" class="w-16 h-16 text-danger mx-auto mt-3"></i>
+                    <div class="text-3xl mt-5">Are you sure?</div>
+                    <div class="text-slate-500 mt-2">Do you really want to delete this data? <br>This process cannot be undone.</div>
+                </div>
+                <div class="px-5 pb-8 text-center">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
+                    <button id="btn_delete_my_references" type="button" class="btn btn-danger w-24">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <!-- END: Content -->
+    <div id="loader-wrapper" class="loader-wrapper">
+        <span class="loader">
+            <div class=" col-span-6 sm:col-span-3 xl:col-span-2 flex flex-col justify-end items-center">
+                <i data-loading-icon="oval" class="w-100 w-100" ></i>
+            </div>
+        </span>
+    </div>
+
+    <section id="loading">
+        <div id="loading-content"></div>
+      </section>
+    <!--<div id="__notif_content_src" style="display: none;"></div>-->
+
+
+</div>
+<!-- BEGIN: Dark Mode Switcher-->
+
+
+
+
+<!-- END: Dark Mode Switcher-->
+
+<!-- BEGIN: JS Assets-->
+
+<!--<script src="../https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script src="../https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>-->
+<script src="http://192.168.10.12/dist/js/app.js"></script>
+<script src="http://192.168.10.12/assets/jquery/jquery-3.6.1.min.js"></script>
+<script src="http://192.168.10.12/assets/datatable/datatables.min.js"></script>
+<script src="http://192.168.10.12/assets/toastify/toastify.js"></script>
+<script src="http://192.168.10.12/assets/litepicker/dist/litepicker.js"></script>
+<!--<script src="http://192.168.10.12/assets/litepicker/dist/litepicker.umd.js"></script>-->
+<script src="http://192.168.10.12/assets/litepicker/dist/plugins/ranges.js"></script>
+<script src="http://192.168.10.12/assets/dayjs/dayjs.min.js"></script>
+<script src="http://192.168.10.12/js/notification.js?ts=20231010133017"></script>
+<script src="http://192.168.10.12/js/notificationcore.js?ts=20231010133017"></script>
+<script src="http://192.168.10.12/assets/uniupload/uniupload.js?ts=20231010133017"></script>
+<script src="http://192.168.10.12/js/datepicker.js?ts=20231010133017"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
+
+
+
+<!-- Plugin Js-->
+<!--
+<script src="http://192.168.10.12/assets/bundles/dataTables.bundle.js"></script>
+-->
+<script src="http://192.168.10.12/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script src="http://192.168.10.12/vendor/select2/js/select2.js?ts=20231010133017"></script>
+
+<link rel="stylesheet" href="http://192.168.10.12/src/js/app.js" />
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+<script type="text/javascript" src="http://192.168.10.12/vendor/tooltipster/js/tooltipster.bundle.min.js?ts=20231010133017"></script>
+
+<script src="http://192.168.10.12/js/common.js?ts=20231010133017"></script>
+
+<script src="http://192.168.10.12/assets/bundles/apexcharts.bundle.js"></script>
+
+<script src="http://192.168.10.12/assets/dayjs/dayjs.min.js"></script>
+
+<script src="http://192.168.10.12/assets/filepond-master/dist/filepond.js"></script>
+<script src="http://192.168.10.12/assets/filepond-master/dist/filepond.min.js"></script>
+<script src="http://192.168.10.12/assets/filepond-master/dist/file-size-validation/filepond-plugin-file-validate-size.min.js"></script>
+<script src="http://192.168.10.12/assets/filepond-master/dist/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js"></script>
+<script src="http://192.168.10.12/assets/filepond-master/dist/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js"></script>
+<script src="http://192.168.10.12/assets/jquery-filepond-master/filepond.jquery.js"></script>
+<script src="http://192.168.10.12/js/app.js"></script>
+<script src="http://192.168.10.12/js/global_js.js"></script>
+
+ <!-- Font Awesome 6.2.1 JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Add this script at the bottom of your layout, just before the closing </body> tag -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+
+
+
+
+
+    <script src="http://192.168.10.12/js/my_profile/profile.js"></script>
+    <script src="http://192.168.10.12/js/my_profile/ref_address.js"></script>
+    <script src="http://192.168.10.12/js/my_profile/update_profile_picture_pond.js"></script>
+
+    <script src="http://192.168.10.12/js/my_profile/new_profile_uploader.js"></script>
+
+
+
+<script>
+    var __basepath = "http://192.168.10.12";
+    var timeout = null;
+
+    $(window).on("load",function(){
+
+
+    $(".loader-wrapper").fadeOut("slow");
+
+    });
+
+function showLoading() {
+  document.querySelector('#loading').classList.add('loading');
+  document.querySelector('#loading-content').classList.add('loading-content');
+}
+
+function hideLoading() {
+  document.querySelector('#loading').classList.remove('loading');
+  document.querySelector('#loading-content').classList.remove('loading-content');
+}
+
+</script>
+
+<script src="http://192.168.10.12/js/dropdown.js"></script>
+<script src="http://192.168.10.12/js/logout.js"></script>
+
+<!-- END: JS Assets-->
+<script type="text/javascript">
+var phpdebugbar = new PhpDebugBar.DebugBar();
+phpdebugbar.addIndicator("php_version", new PhpDebugBar.DebugBar.Indicator({"icon":"code","tooltip":"PHP Version"}), "right");
+phpdebugbar.addTab("messages", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Messages", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+phpdebugbar.addIndicator("time", new PhpDebugBar.DebugBar.Indicator({"icon":"clock-o","tooltip":"Request Duration"}), "right");
+phpdebugbar.addTab("timeline", new PhpDebugBar.DebugBar.Tab({"icon":"tasks","title":"Timeline", "widget": new PhpDebugBar.Widgets.TimelineWidget()}));
+phpdebugbar.addIndicator("memory", new PhpDebugBar.DebugBar.Indicator({"icon":"cogs","tooltip":"Memory Usage"}), "right");
+phpdebugbar.addTab("exceptions", new PhpDebugBar.DebugBar.Tab({"icon":"bug","title":"Exceptions", "widget": new PhpDebugBar.Widgets.ExceptionsWidget()}));
+phpdebugbar.addTab("views", new PhpDebugBar.DebugBar.Tab({"icon":"leaf","title":"Views", "widget": new PhpDebugBar.Widgets.TemplatesWidget()}));
+phpdebugbar.addTab("route", new PhpDebugBar.DebugBar.Tab({"icon":"share","title":"Route", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.addIndicator("currentroute", new PhpDebugBar.DebugBar.Indicator({"icon":"share","tooltip":"Route"}), "right");
+phpdebugbar.addTab("queries", new PhpDebugBar.DebugBar.Tab({"icon":"database","title":"Queries", "widget": new PhpDebugBar.Widgets.LaravelSQLQueriesWidget()}));
+phpdebugbar.addTab("models", new PhpDebugBar.DebugBar.Tab({"icon":"cubes","title":"Models", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.addTab("livewire", new PhpDebugBar.DebugBar.Tab({"icon":"bolt","title":"Livewire", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.addTab("emails", new PhpDebugBar.DebugBar.Tab({"icon":"inbox","title":"Mails", "widget": new PhpDebugBar.Widgets.MailsWidget()}));
+phpdebugbar.addTab("gate", new PhpDebugBar.DebugBar.Tab({"icon":"list-alt","title":"Gate", "widget": new PhpDebugBar.Widgets.MessagesWidget()}));
+phpdebugbar.addTab("session", new PhpDebugBar.DebugBar.Tab({"icon":"archive","title":"Session", "widget": new PhpDebugBar.Widgets.VariableListWidget()}));
+phpdebugbar.addTab("request", new PhpDebugBar.DebugBar.Tab({"icon":"tags","title":"Request", "widget": new PhpDebugBar.Widgets.HtmlVariableListWidget()}));
+phpdebugbar.setDataMap({
+"php_version": ["php.version", ],
+"messages": ["messages.messages", []],
+"messages:badge": ["messages.count", null],
+"time": ["time.duration_str", '0ms'],
+"timeline": ["time", {}],
+"memory": ["memory.peak_usage_str", '0B'],
+"exceptions": ["exceptions.exceptions", []],
+"exceptions:badge": ["exceptions.count", null],
+"views": ["views", []],
+"views:badge": ["views.nb_templates", 0],
+"route": ["route", {}],
+"currentroute": ["route.uri", ],
+"queries": ["queries", []],
+"queries:badge": ["queries.nb_statements", 0],
+"models": ["models.data", {}],
+"models:badge": ["models.count", 0],
+"livewire": ["livewire.data", {}],
+"livewire:badge": ["livewire.count", 0],
+"emails": ["swiftmailer_mails.mails", []],
+"emails:badge": ["swiftmailer_mails.count", null],
+"gate": ["gate.messages", []],
+"gate:badge": ["gate.count", null],
+"session": ["session", {}],
+"request": ["request", {}]
+});
+phpdebugbar.restoreState();
+phpdebugbar.ajaxHandler = new PhpDebugBar.AjaxHandler(phpdebugbar, undefined, true);
+phpdebugbar.ajaxHandler.bindToFetch();
+phpdebugbar.ajaxHandler.bindToXHR();
+phpdebugbar.setOpenHandler(new PhpDebugBar.OpenHandler({"url":"http:\/\/192.168.10.12\/_debugbar\/open"}));
+phpdebugbar.addDataSet({"__meta":{"id":"X96df3e8eb556a3fa2459faa64f11df10","datetime":"2023-10-10 13:30:17","utime":1696915817.448425,"method":"GET","uri":"\/my\/profile","ip":"192.168.10.21"},"php":{"version":"7.4.27","interface":"cli-server"},"messages":{"count":0,"messages":[]},"time":{"start":1696915817.217788,"end":1696915817.448437,"duration":0.23064899444580078,"duration_str":"231ms","measures":[{"label":"Booting","start":1696915817.217788,"relative_start":0,"end":1696915817.340816,"relative_end":1696915817.340816,"duration":0.12302803993225098,"duration_str":"123ms","params":[],"collector":null},{"label":"Application","start":1696915817.342568,"relative_start":0.12477993965148926,"end":1696915817.448439,"relative_end":1.9073486328125e-6,"duration":0.10587096214294434,"duration_str":"106ms","params":[],"collector":null}]},"memory":{"peak_usage":24460128,"peak_usage_str":"23MB"},"exceptions":{"count":0,"exceptions":[]},"views":{"nb_templates":16,"templates":[{"name":"my_Profile.profile (\\resources\\views\\my_Profile\\profile.blade.php)","param_count":0,"params":[],"type":"blade"},{"name":"breadcrumbs::bootstrap4 (\\vendor\\davejamesmiller\\laravel-breadcrumbs\\views\\bootstrap4.blade.php)","param_count":1,"params":["breadcrumbs"],"type":"blade"},{"name":"my_Profile.modal.profile_picture (\\resources\\views\\my_Profile\\modal\\profile_picture.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.educational_bg_modal (\\resources\\views\\my_Profile\\modal\\educational_bg_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_civil_service_modal (\\resources\\views\\my_Profile\\modal\\add_civil_service_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_work_exp_modal (\\resources\\views\\my_Profile\\modal\\add_work_exp_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_voluntary_work_modal (\\resources\\views\\my_Profile\\modal\\add_voluntary_work_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_LD_modal (\\resources\\views\\my_Profile\\modal\\add_LD_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_other_info_modal (\\resources\\views\\my_Profile\\modal\\add_other_info_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"my_Profile.modal.add_references_modal (\\resources\\views\\my_Profile\\modal\\add_references_modal.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"layouts.app (\\resources\\views\\layouts\\app.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"_partials.head (\\resources\\views\\_partials\\head.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"_partials.mobile (\\resources\\views\\_partials\\mobile.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"_partials.sidebar (\\resources\\views\\_partials\\sidebar.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"_partials.topbar (\\resources\\views\\_partials\\topbar.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"},{"name":"_partials.scripts (\\resources\\views\\_partials\\scripts.blade.php)","param_count":3,"params":["__env","app","errors"],"type":"blade"}]},"route":{"uri":"GET my\/profile","middleware":"web","controller":"App\\Http\\Controllers\\e_hris_controllers\\ProfileController\\ProfileController@index","namespace":null,"prefix":"\/my","where":[],"as":"profile","file":"<a href=\"phpstorm:\/\/open?file=D:\\Projects\\ASIS\\ASIS\\app\\Http\\Controllers\\e_hris_controllers\\ProfileController\\ProfileController.php&line=45\">\\app\\Http\\Controllers\\e_hris_controllers\\ProfileController\\ProfileController.php:45-48<\/a>"},"queries":{"nb_statements":26,"nb_failed_statements":0,"accumulated_duration":0.04549999999999999,"accumulated_duration_str":"45.5ms","statements":[{"sql":"select * from `students` where `id` = 2 limit 1","type":"query","params":[],"bindings":["2"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php","line":53},{"index":16,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\SessionGuard.php","line":159},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\GuardHelpers.php","line":60},{"index":18,"namespace":"middleware","name":"auth","line":63},{"index":19,"namespace":"middleware","name":"auth","line":42}],"duration":0.01345,"duration_str":"13.45ms","stmt_id":"\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\EloquentUserProvider.php:53","connection":"portal","start_percent":0,"width_percent":29.56},{"sql":"update `students` set `last_seen` = '2023-10-10 13:30:17', `students`.`updated_at` = '2023-10-10 13:30:17' where `id` = 2","type":"query","params":[],"bindings":["2023-10-10 13:30:17","2023-10-10 13:30:17","2"],"hints":null,"show_copy":false,"backtrace":[{"index":11,"namespace":null,"name":"\\app\\Http\\Middleware\\UserLastActivity.php","line":27},{"index":12,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php","line":167},{"index":13,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php","line":50},{"index":14,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php","line":167},{"index":15,"namespace":"middleware","name":"auth","line":44}],"duration":0.00138,"duration_str":"1.38ms","stmt_id":"\\app\\Http\\Middleware\\UserLastActivity.php:27","connection":"portal","start_percent":29.56,"width_percent":3.033},{"sql":"select * from `ref_eligibility` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":754},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00544,"duration_str":"5.44ms","stmt_id":"\\app\\Helper\\global_functions.php:754","connection":"primehrmo","start_percent":32.593,"width_percent":11.956},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00034,"duration_str":"340\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":44.549,"width_percent":0.747},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.0003,"duration_str":"300\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":45.297,"width_percent":0.659},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.0003,"duration_str":"300\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":45.956,"width_percent":0.659},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00020999999999999998,"duration_str":"210\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":46.615,"width_percent":0.462},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00022,"duration_str":"220\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":47.077,"width_percent":0.484},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00020999999999999998,"duration_str":"210\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":47.56,"width_percent":0.462},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00020999999999999998,"duration_str":"210\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":48.022,"width_percent":0.462},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00022,"duration_str":"220\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":48.484,"width_percent":0.484},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00020999999999999998,"duration_str":"210\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":48.967,"width_percent":0.462},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00020999999999999998,"duration_str":"210\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":49.429,"width_percent":0.462},{"sql":"select * from `default_setting` where `active` = 1","type":"query","params":[],"bindings":["1"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1017},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.0002,"duration_str":"200\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1017","connection":"portal","start_percent":49.89,"width_percent":0.44},{"sql":"select * from `students` where `studid` = '2014-0476' and `active` = 1 limit 1","type":"query","params":[],"bindings":["2014-0476","1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1853},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00022,"duration_str":"220\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1853","connection":"portal","start_percent":50.33,"width_percent":0.484},{"sql":"select * from `students` where `studid` = '2014-0476' and `active` = 1 limit 1","type":"query","params":[],"bindings":["2014-0476","1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1868},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.0002,"duration_str":"200\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1868","connection":"portal","start_percent":50.813,"width_percent":0.44},{"sql":"select * from `students` where `studid` = '2014-0476' and `active` = 1 limit 1","type":"query","params":[],"bindings":["2014-0476","1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1868},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00019,"duration_str":"190\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1868","connection":"portal","start_percent":51.253,"width_percent":0.418},{"sql":"select * from `admin_notification` where `active` = 1 and `seen` = 0 and `target_id` is null","type":"query","params":[],"bindings":["1","0"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":462},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00037,"duration_str":"370\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:462","connection":"primehrmo","start_percent":51.67,"width_percent":0.813},{"sql":"select * from `admin_notification` where `active` = 1 and `seen` = 0 and `target_id` is null","type":"query","params":[],"bindings":["1","0"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":462},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00034,"duration_str":"340\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:462","connection":"primehrmo","start_percent":52.484,"width_percent":0.747},{"sql":"select * from `admin_notification` where `active` = 1 and `seen` = 0 and `target_id` is null","type":"query","params":[],"bindings":["1","0"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":462},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00035,"duration_str":"350\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:462","connection":"primehrmo","start_percent":53.231,"width_percent":0.769},{"sql":"select * from `admin_notification` where `active` = 1 and `seen` = 0 and `target_id` is null","type":"query","params":[],"bindings":["1","0"],"hints":null,"show_copy":false,"backtrace":[{"index":14,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":462},{"index":17,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":19,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":20,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00035,"duration_str":"350\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:462","connection":"primehrmo","start_percent":54,"width_percent":0.769},{"sql":"select * from `students` where `studid` = '2014-0476' and `active` = 1 limit 1","type":"query","params":[],"bindings":["2014-0476","1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1190},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00019,"duration_str":"190\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1190","connection":"portal","start_percent":54.769,"width_percent":0.418},{"sql":"select * from `default_setting` where `key` = 'agency_logo' and `active` = 1 limit 1","type":"query","params":[],"bindings":["agency_logo","1"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":1199},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00017,"duration_str":"170\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:1199","connection":"portal","start_percent":55.187,"width_percent":0.374},{"sql":"select * from \"student\" where \"studid\" = '2014-0476' limit 1","type":"query","params":[],"bindings":["2014-0476"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":497},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.019309999999999997,"duration_str":"19.31ms","stmt_id":"\\app\\Helper\\global_functions.php:497","connection":"spamast_digos","start_percent":55.56,"width_percent":42.44},{"sql":"select * from \"student\" where \"studid\" = '2014-0476' limit 1","type":"query","params":[],"bindings":["2014-0476"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":497},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00045,"duration_str":"450\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:497","connection":"spamast_digos","start_percent":98,"width_percent":0.989},{"sql":"select * from \"student\" where \"studid\" = '2014-0476' limit 1","type":"query","params":[],"bindings":["2014-0476"],"hints":null,"show_copy":false,"backtrace":[{"index":15,"namespace":null,"name":"\\app\\Helper\\global_functions.php","line":535},{"index":18,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php","line":108},{"index":19,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php","line":58},{"index":20,"namespace":null,"name":"\\vendor\\livewire\\livewire\\src\\ComponentConcerns\\RendersLivewireComponents.php","line":69},{"index":21,"namespace":null,"name":"\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php","line":61}],"duration":0.00046,"duration_str":"460\u03bcs","stmt_id":"\\app\\Helper\\global_functions.php:535","connection":"spamast_digos","start_percent":98.989,"width_percent":1.011}]},"models":{"data":{"App\\Models\\ASIS_Models\\posgres\\portal\\srgb\\student":3,"App\\Models\\ASIS_Models\\system\\default_setting":166,"App\\Models\\e_hris_models\\ref\\ref_eligibility":7,"App\\Models\\User":5},"count":181},"livewire":{"data":[],"count":0},"swiftmailer_mails":{"count":0,"mails":[]},"gate":{"count":0,"messages":[]},"session":{"_token":"Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ","_flash":"array:2 [\n  \"old\" => []\n  \"new\" => []\n]","_previous":"array:1 [\n  \"url\" => \"http:\/\/192.168.10.12\/my\/profile\"\n]","login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d":"2","__notif_code":"0","__notif_title":"","__notif_content":"","PHPDEBUGBAR_STACK_DATA":"[]"},"request":{"path_info":"\/my\/profile","status_code":"<pre class=sf-dump id=sf-dump-855095822 data-indent-pad=\"  \"><span class=sf-dump-num>200<\/span>\n<\/pre><script>Sfdump(\"sf-dump-855095822\", {\"maxDepth\":0})<\/script>\n","status_text":"OK","format":"html","content_type":"text\/html; charset=UTF-8","request_query":"<pre class=sf-dump id=sf-dump-1033408374 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-1033408374\", {\"maxDepth\":0})<\/script>\n","request_request":"<pre class=sf-dump id=sf-dump-748321436 data-indent-pad=\"  \">[]\n<\/pre><script>Sfdump(\"sf-dump-748321436\", {\"maxDepth\":0})<\/script>\n","request_headers":"<pre class=sf-dump id=sf-dump-970431827 data-indent-pad=\"  \"><span class=sf-dump-note>array:8<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>host<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"13 characters\">192.168.10.12<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>connection<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"10 characters\">keep-alive<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>user-agent<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"111 characters\">Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/117.0.0.0 Safari\/537.36<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"3 characters\">*\/*<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>referer<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"42 characters\">http:\/\/192.168.10.12\/signature\/my-sinature<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept-encoding<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"13 characters\">gzip, deflate<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>accept-language<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"14 characters\">en-US,en;q=0.9<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cookie<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"717 characters\">XSRF-TOKEN=eyJpdiI6ImJGTE9kai9uUXNnbTdUVldwWnlzamc9PSIsInZhbHVlIjoicE5wV1grcHJoM0FNcVpxSmY4R1BpUzhHeElOaXZueUhJQnBLTFpkMmU3UFNuVWlLbmVFeVlFYUN0TXN6Q21od0taZzBSTzdhVXpPdm14QldrMnhCM1VLZFMwdlB0VzJvZ2paYXJhYlNyZnlxdnM3ZDNoazBrNXdHaXhkT2JnUHIiLCJtYWMiOiI5Mjk4YTBmYzVmNzE1NzE0ZjkzNDcwOTQ1YmY3NWU5ZDgwZWQ2N2Q5YjFhNmE2MzBmODBlZDJhYjBkMmRkNjQyIiwidGFnIjoiIn0%3D; dssc_portal_session=eyJpdiI6IjhKUEMwOTZoT2NuRytNUTNlNnRKbXc9PSIsInZhbHVlIjoiMVRpZXRvZ2p0Rk1TekNVVUtEdEtRM08vZHA2S3BFVS9PYmxWYWQ2Zm1TUmt5YUJKYmFseHZxZDJwT2U4ZzUxVTNaR1pHZkMyeGxXVnJlT1ZhUXhvRWh1YnVCM01pdXFjVUk1REhQREREZWZFN2U5SEE2cEJWNURWRldWaTMvanQiLCJtYWMiOiJmNjFmMjgyZTI3NTkwOGE4MzIxZTc0Mjc4NjNkNDQ0NWRhZWRkOWFiMGEzNTk5NWI1YjFhNmE5YzkzZTU1MzY4IiwidGFnIjoiIn0%3D<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-970431827\", {\"maxDepth\":0})<\/script>\n","request_server":"<pre class=sf-dump id=sf-dump-1617019363 data-indent-pad=\"  \"><span class=sf-dump-note>array:23<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>DOCUMENT_ROOT<\/span>\" => \"<span class=sf-dump-str title=\"28 characters\">D:\\Projects\\ASIS\\ASIS\\public<\/span>\"\n  \"<span class=sf-dump-key>REMOTE_ADDR<\/span>\" => \"<span class=sf-dump-str title=\"13 characters\">192.168.10.21<\/span>\"\n  \"<span class=sf-dump-key>REMOTE_PORT<\/span>\" => \"<span class=sf-dump-str title=\"5 characters\">65178<\/span>\"\n  \"<span class=sf-dump-key>SERVER_SOFTWARE<\/span>\" => \"<span class=sf-dump-str title=\"29 characters\">PHP 7.4.27 Development Server<\/span>\"\n  \"<span class=sf-dump-key>SERVER_PROTOCOL<\/span>\" => \"<span class=sf-dump-str title=\"8 characters\">HTTP\/1.1<\/span>\"\n  \"<span class=sf-dump-key>SERVER_NAME<\/span>\" => \"<span class=sf-dump-str title=\"13 characters\">192.168.10.12<\/span>\"\n  \"<span class=sf-dump-key>SERVER_PORT<\/span>\" => \"<span class=sf-dump-str title=\"2 characters\">80<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_URI<\/span>\" => \"<span class=sf-dump-str title=\"11 characters\">\/my\/profile<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_METHOD<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">GET<\/span>\"\n  \"<span class=sf-dump-key>SCRIPT_NAME<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">\/index.php<\/span>\"\n  \"<span class=sf-dump-key>SCRIPT_FILENAME<\/span>\" => \"<span class=sf-dump-str title=\"38 characters\">D:\\Projects\\ASIS\\ASIS\\public\\index.php<\/span>\"\n  \"<span class=sf-dump-key>PATH_INFO<\/span>\" => \"<span class=sf-dump-str title=\"11 characters\">\/my\/profile<\/span>\"\n  \"<span class=sf-dump-key>PHP_SELF<\/span>\" => \"<span class=sf-dump-str title=\"21 characters\">\/index.php\/my\/profile<\/span>\"\n  \"<span class=sf-dump-key>HTTP_HOST<\/span>\" => \"<span class=sf-dump-str title=\"13 characters\">192.168.10.12<\/span>\"\n  \"<span class=sf-dump-key>HTTP_CONNECTION<\/span>\" => \"<span class=sf-dump-str title=\"10 characters\">keep-alive<\/span>\"\n  \"<span class=sf-dump-key>HTTP_USER_AGENT<\/span>\" => \"<span class=sf-dump-str title=\"111 characters\">Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/117.0.0.0 Safari\/537.36<\/span>\"\n  \"<span class=sf-dump-key>HTTP_ACCEPT<\/span>\" => \"<span class=sf-dump-str title=\"3 characters\">*\/*<\/span>\"\n  \"<span class=sf-dump-key>HTTP_REFERER<\/span>\" => \"<span class=sf-dump-str title=\"42 characters\">http:\/\/192.168.10.12\/signature\/my-sinature<\/span>\"\n  \"<span class=sf-dump-key>HTTP_ACCEPT_ENCODING<\/span>\" => \"<span class=sf-dump-str title=\"13 characters\">gzip, deflate<\/span>\"\n  \"<span class=sf-dump-key>HTTP_ACCEPT_LANGUAGE<\/span>\" => \"<span class=sf-dump-str title=\"14 characters\">en-US,en;q=0.9<\/span>\"\n  \"<span class=sf-dump-key>HTTP_COOKIE<\/span>\" => \"<span class=sf-dump-str title=\"717 characters\">XSRF-TOKEN=eyJpdiI6ImJGTE9kai9uUXNnbTdUVldwWnlzamc9PSIsInZhbHVlIjoicE5wV1grcHJoM0FNcVpxSmY4R1BpUzhHeElOaXZueUhJQnBLTFpkMmU3UFNuVWlLbmVFeVlFYUN0TXN6Q21od0taZzBSTzdhVXpPdm14QldrMnhCM1VLZFMwdlB0VzJvZ2paYXJhYlNyZnlxdnM3ZDNoazBrNXdHaXhkT2JnUHIiLCJtYWMiOiI5Mjk4YTBmYzVmNzE1NzE0ZjkzNDcwOTQ1YmY3NWU5ZDgwZWQ2N2Q5YjFhNmE2MzBmODBlZDJhYjBkMmRkNjQyIiwidGFnIjoiIn0%3D; dssc_portal_session=eyJpdiI6IjhKUEMwOTZoT2NuRytNUTNlNnRKbXc9PSIsInZhbHVlIjoiMVRpZXRvZ2p0Rk1TekNVVUtEdEtRM08vZHA2S3BFVS9PYmxWYWQ2Zm1TUmt5YUJKYmFseHZxZDJwT2U4ZzUxVTNaR1pHZkMyeGxXVnJlT1ZhUXhvRWh1YnVCM01pdXFjVUk1REhQREREZWZFN2U5SEE2cEJWNURWRldWaTMvanQiLCJtYWMiOiJmNjFmMjgyZTI3NTkwOGE4MzIxZTc0Mjc4NjNkNDQ0NWRhZWRkOWFiMGEzNTk5NWI1YjFhNmE5YzkzZTU1MzY4IiwidGFnIjoiIn0%3D<\/span>\"\n  \"<span class=sf-dump-key>REQUEST_TIME_FLOAT<\/span>\" => <span class=sf-dump-num>1696915817.2178<\/span>\n  \"<span class=sf-dump-key>REQUEST_TIME<\/span>\" => <span class=sf-dump-num>1696915817<\/span>\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1617019363\", {\"maxDepth\":0})<\/script>\n","request_cookies":"<pre class=sf-dump id=sf-dump-1666679674 data-indent-pad=\"  \"><span class=sf-dump-note>array:2<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>XSRF-TOKEN<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ<\/span>\"\n  \"<span class=sf-dump-key>dssc_portal_session<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">ZBhYKjnFVGhUmvIo1cVWuqP7ygOC9EklsFJkUjOh<\/span>\"\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-1666679674\", {\"maxDepth\":0})<\/script>\n","response_headers":"<pre class=sf-dump id=sf-dump-364864047 data-indent-pad=\"  \"><span class=sf-dump-note>array:5<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>content-type<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"24 characters\">text\/html; charset=UTF-8<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>cache-control<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"17 characters\">no-cache, private<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>date<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"29 characters\">Tue, 10 Oct 2023 05:30:17 GMT<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>set-cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"428 characters\">XSRF-TOKEN=eyJpdiI6IjBoR2JwS01jQlY2YThjMmpzTmtqVGc9PSIsInZhbHVlIjoicHJHWnhEYXdJZVA3TThTNlJWbmVGWThLOWR3Z0YrMzdtS2R1Y2loeGZaZ1BPems0Mk0zS25NV0d4bGUzVmZBQUJneld1VHpDT1MzWml5NHNBZ2tueUVmaElabnBDY2c2blNiZW5QaWdTVXFJWU44cUVQZWk1YkZrRjdkUTdoNUUiLCJtYWMiOiI4MmRmNjc0N2U5YjkzNjViYWM0ZGJjY2MyOGU4YjA1MGIxNzQyOTIyYzMyNGMyMGM1YWZhMmE4NWEzYjJiNmM5IiwidGFnIjoiIn0%3D; expires=Tue, 10-Oct-2023 07:30:17 GMT; Max-Age=7200; path=\/; samesite=lax<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"447 characters\">dssc_portal_session=eyJpdiI6Ii83SWl0M1Q5SE92NXptRXFvOEpRcGc9PSIsInZhbHVlIjoidFptVEZHRFZWdFRzSVdjR2RlSVFxWE1USnVhUDR3WDQyRE5RRHVFMHlHSDY5WWF3ZEZPQk9yVEJVWURMeS9OM2NvdUlDUVVZWG1uc3FleVFOeHpvYnNuRTVmeVdLSUxMTDlnVEpleVk2RjYrSzMzcGNCN081SjUyR0Q1bFkvMDMiLCJtYWMiOiI4ZWI5ZjM5NDZiZDc5NjBiZjQ0OWUxYjg5ZDc4MGIxYjk4NjU5NzlkY2ZlNmVhZDI5ZWU4YjcyM2RjNDcxNzU2IiwidGFnIjoiIn0%3D; expires=Tue, 10-Oct-2023 07:30:17 GMT; Max-Age=7200; path=\/; httponly; samesite=lax<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>Set-Cookie<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    <span class=sf-dump-index>0<\/span> => \"<span class=sf-dump-str title=\"400 characters\">XSRF-TOKEN=eyJpdiI6IjBoR2JwS01jQlY2YThjMmpzTmtqVGc9PSIsInZhbHVlIjoicHJHWnhEYXdJZVA3TThTNlJWbmVGWThLOWR3Z0YrMzdtS2R1Y2loeGZaZ1BPems0Mk0zS25NV0d4bGUzVmZBQUJneld1VHpDT1MzWml5NHNBZ2tueUVmaElabnBDY2c2blNiZW5QaWdTVXFJWU44cUVQZWk1YkZrRjdkUTdoNUUiLCJtYWMiOiI4MmRmNjc0N2U5YjkzNjViYWM0ZGJjY2MyOGU4YjA1MGIxNzQyOTIyYzMyNGMyMGM1YWZhMmE4NWEzYjJiNmM5IiwidGFnIjoiIn0%3D; expires=Tue, 10-Oct-2023 07:30:17 GMT; path=\/<\/span>\"\n    <span class=sf-dump-index>1<\/span> => \"<span class=sf-dump-str title=\"419 characters\">dssc_portal_session=eyJpdiI6Ii83SWl0M1Q5SE92NXptRXFvOEpRcGc9PSIsInZhbHVlIjoidFptVEZHRFZWdFRzSVdjR2RlSVFxWE1USnVhUDR3WDQyRE5RRHVFMHlHSDY5WWF3ZEZPQk9yVEJVWURMeS9OM2NvdUlDUVVZWG1uc3FleVFOeHpvYnNuRTVmeVdLSUxMTDlnVEpleVk2RjYrSzMzcGNCN081SjUyR0Q1bFkvMDMiLCJtYWMiOiI4ZWI5ZjM5NDZiZDc5NjBiZjQ0OWUxYjg5ZDc4MGIxYjk4NjU5NzlkY2ZlNmVhZDI5ZWU4YjcyM2RjNDcxNzU2IiwidGFnIjoiIn0%3D; expires=Tue, 10-Oct-2023 07:30:17 GMT; path=\/; httponly<\/span>\"\n  <\/samp>]\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-364864047\", {\"maxDepth\":0})<\/script>\n","session_attributes":"<pre class=sf-dump id=sf-dump-462579870 data-indent-pad=\"  \"><span class=sf-dump-note>array:8<\/span> [<samp data-depth=1 class=sf-dump-expanded>\n  \"<span class=sf-dump-key>_token<\/span>\" => \"<span class=sf-dump-str title=\"40 characters\">Vibq6ZhIiakdjuH9NqLIYPURoACEF0Z0mUhNHcaQ<\/span>\"\n  \"<span class=sf-dump-key>_flash<\/span>\" => <span class=sf-dump-note>array:2<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>old<\/span>\" => []\n    \"<span class=sf-dump-key>new<\/span>\" => []\n  <\/samp>]\n  \"<span class=sf-dump-key>_previous<\/span>\" => <span class=sf-dump-note>array:1<\/span> [<samp data-depth=2 class=sf-dump-compact>\n    \"<span class=sf-dump-key>url<\/span>\" => \"<span class=sf-dump-str title=\"31 characters\">http:\/\/192.168.10.12\/my\/profile<\/span>\"\n  <\/samp>]\n  \"<span class=sf-dump-key>login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d<\/span>\" => <span class=sf-dump-num>2<\/span>\n  \"<span class=sf-dump-key>__notif_code<\/span>\" => \"<span class=sf-dump-str>0<\/span>\"\n  \"<span class=sf-dump-key>__notif_title<\/span>\" => \"\"\n  \"<span class=sf-dump-key>__notif_content<\/span>\" => \"\"\n  \"<span class=sf-dump-key>PHPDEBUGBAR_STACK_DATA<\/span>\" => []\n<\/samp>]\n<\/pre><script>Sfdump(\"sf-dump-462579870\", {\"maxDepth\":0})<\/script>\n"}}, "X96df3e8eb556a3fa2459faa64f11df10");
+
+</script>
+</body>
+</html>
