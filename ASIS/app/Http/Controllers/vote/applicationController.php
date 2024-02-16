@@ -19,7 +19,7 @@ use App\Models\ASIS_Models\vote\supported_candidate_model;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
-
+use Carbon\Carbon;
 class applicationController extends Controller
 {
     public function electionApplication(){
@@ -236,12 +236,12 @@ class applicationController extends Controller
 
         // dd($request->type_id, $request->applicant_parties, $request->apply_Position_id);
 
-        $save_participants = new elect_participants_model;
-        $save_participants->open_typeID = $request->open_typeID;
-        $save_participants->type_id = $request->vote_typeID;
-        $save_participants->position_id = $request->apply_Position_id;
-        $save_participants->candidate_parties_id = $request->applicant_parties;
-        $save_participants->participant_id = $request->applicant;
+        // $save_participants = new elect_participants_model;
+        // $save_participants->open_typeID = $request->open_typeID;
+        // $save_participants->type_id = $request->vote_typeID;
+        // $save_participants->position_id = $request->apply_Position_id;
+        // $save_participants->candidate_parties_id = $request->applicant_parties;
+        // $save_participants->participant_id = $request->applicant;
 
         if($checkParty_participants && $request->applicant_parties != ""){
 
@@ -249,7 +249,21 @@ class applicationController extends Controller
 
         }else{
 
-            $save_participants->save();
+            elect_participants_model::updateOrCreate(
+                [
+                    'open_typeID' => $request->open_typeID,
+                    'participant_id' => $request->applicant
+                ],
+                [
+                    'type_id' => $request->vote_typeID,
+                    'candidate_parties_id' => $request->applicant_parties,
+                    'position_id' => $request->apply_Position_id,
+                    'active' => 1
+                ]
+                
+            );
+
+            // $save_participants->updateCreate(['participant_id' => $request->applicant, 'type_id' => $request->vote_typeID]);
             return response()->json(['status' => 200]);
 
         }
@@ -281,16 +295,6 @@ class applicationController extends Controller
         );
         return response()->json(["status" => 200]);
 
-        // $save_OpenVoting = new open_voting_model;
-
-        // $save_OpenVoting->open_applicationID = $open_Application_id;
-        // $save_OpenVoting->type_id = $typeID;
-        // $save_OpenVoting->open_date = $openDate.'-'. $openTime;
-        // $save_OpenVoting->close_date = $closeDate.'-'. $closeTime;
-        // $save_OpenVoting->status = 1;
-        // $save_OpenVoting->save();
-
-        // return response()->json(["status" => 200]);
 
     }
 
@@ -534,15 +538,38 @@ class applicationController extends Controller
                     $positionname =$position->vote_position;
                 }
 
-                $checkSupported_participants = supported_candidate_model::where('type_id', $participant->type_id)
-                    ->Where('candidates', $participant->participant_id)
-                    ->Where('position_id', $participant->position_id)
-                    ->Where('active', 1)->exists();
+                
+                $check_if_vote_start = open_voting_model::where('type_id', $request->type_id)->first();
 
-                    $encrypted_typeID = $checkSupported_participants ? Crypt::encryptString($request->type_id) : '';
-                    $encrypted_participantID = $checkSupported_participants ? Crypt::encryptString($participant->participant_id) : '';
-                    $inactivecandidate = $checkSupported_participants ? 'inactivecandidate' : '';
-                    $disabled = $checkSupported_participants ? 'disabled' : '';
+                $now = now()->setTimezone('Asia/Manila');
+                $current_date = $now->format('m-d-Y g:iA');
+                
+                $encrypted_typeID = '';
+                $encrypted_participantID = '';
+                $inactivecandidate = '';
+                $disabled = '';
+                
+                if (!$check_if_vote_start || ($check_if_vote_start && $current_date > $check_if_vote_start->open_date)) {
+                    $checkSupported_participants = supported_candidate_model::where('type_id', $participant->type_id)
+                        ->where('candidates', $participant->participant_id)
+                        ->where('position_id', $participant->position_id)
+                        ->where('active', 1)
+                        ->exists();
+                
+                    if (!$checkSupported_participants) {
+                        $encrypted_typeID = Crypt::encryptString($request->type_id);
+                        $encrypted_participantID = Crypt::encryptString($participant->participant_id);
+                        $inactivecandidate = 'inactivecandidate';                        
+                    } else {
+                        $disabled = 'disabled';
+                    }
+                }else{
+                    $disabled = 'disabled';
+                }
+                
+
+                
+                   
 
                 $candidateList .= '<tr>
 

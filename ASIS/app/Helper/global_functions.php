@@ -124,7 +124,7 @@ function get_candidate_profile_image($studid)
 {
     $candidate_profile = '';
     if ($studid) {
-        $get_image = elect_participants_model::where('participant_id', $studid)->where('active', true)->first();
+        $get_image = elect_participants_model::where('participant_id', $studid)->first();
         $img = '';
 
         if ($get_image) {

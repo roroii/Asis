@@ -346,19 +346,9 @@ function OnClick_function(){
         let typeName = $(this).data('vote-type-name');
         let group = $(this).data('group');
 
-        // if(group === "independent"){
-        //     $('#group_id').val(0);
-        // }else{
-        //     // alert('with');
-        // }
 
-
-            $('#apply_Header').text(typeName+ ' - Application');
-            // $('#submit_applyModal_btn').removeClass('hidden');
-            $('#please_select').text('Select Position to Apply');
-
-
-        // console.log('typeID:  '+ vote_typeID)
+        $('#apply_Header').text(typeName+ ' - Application');
+        $('#please_select').text('Select Position to Apply');
         $('#open_typeID').val(open_typeID);
         $('#vote_typeID').val(vote_typeID);
 
@@ -382,19 +372,8 @@ function OnClick_function(){
                             var vote_PositionID = data[i]['vote_PositionID'];
                             var vote_PositionName = data[i]['vote_PositionName'];
                             var vote_PositionDesc = data[i]['vote_PositionDesc'];
-                            // var participated = data[i]['participated'];
-
-                            // var participated_id = data[i]['participated_id'];
-
-                            // console.log(participated);
-
-
                             var radioId = `apply_Position_id_${vote_PositionID}`;
 
-                            // if(participated_id == vote_PositionID){
-                            //     $('#'+ radioId).prop('checked', true)
-                            //     $('#'+ radioId).prop('disabled', false)
-                            // }
                             var cd = `<tr class="whitespace-wrap applyPosition" data-toggle="radio">
                                         <td>
                                             <label>
@@ -415,11 +394,6 @@ function OnClick_function(){
 
                             $('#apply_position_modal_tbl > tbody').append(cd);
 
-                            // if (participated == 1 && participated_id == vote_PositionID) {
-                            //     $('#' + radioId).prop('checked', true);
-                            //     $('#' + radioId).prop('disabled', false);
-                            //     $('#change_' + vote_PositionID).removeClass('hidden'); // Show the link
-                            // }
                         }
 
 
@@ -434,7 +408,6 @@ function OnClick_function(){
 
         const apply_modal = tailwind.Modal.getOrCreateInstance(document.querySelector("#apply__modal"));
         apply_modal.show();
-        // alert(open_typeID+'----'+vote_typeID);
     });
 
     $("body").on('click', '.Open_voting', function () {
@@ -499,8 +472,6 @@ function OnClick_function(){
 
 function onSubmit() {
 
-     // Applied for The Selected Position
-
     $("#applied_for_position_form").submit(function (e) {
         e.preventDefault();
         let checkedRadio = $('.apply-position-radio:checked');
@@ -523,7 +494,6 @@ function onSubmit() {
                     dataType: 'json',
                     success: function(response) {
                         
-
                         if (response.status == 200) {
                             __notif_show( 1, "Candidate Applied Successfully");
                             applicant_select.val('').trigger('change');
@@ -534,7 +504,7 @@ function onSubmit() {
                             fetch_openApplication_data();
 
                         }else{
-                            __notif_show( -1, "Candidate Can't Apply Same Position and Parties");
+                            __notif_show( -1, "Position is already taken in same Parties");
                         }
                         // Handle success response
                     }
@@ -620,16 +590,16 @@ function on_change_function(){
 
                     if (applied == 1) {
                         // Disable all radio buttons except the one with the specified ID
-                        $('input[type="radio"]').not(positions).prop('disabled', true);
+                        // $('input[type="radio"]').not(positions).prop('disabled', true);
                         positions.prop('checked', true);
                         applicant_parties.val(candidate_parties_id).trigger('change');
                         applicant_parties.prop('disabled', true);
 
-                        $('#submit_applyModal_btn').prop('disabled', true);
+                        $('#submit_applyModal_btn').text('Update');
                     } else {
                         // Enable all radio buttons and uncheck the specified one
-                        $('input[type="radio"]').prop('checked', false).prop('disabled', false);
-                        $('#submit_applyModal_btn').prop('disabled', false);
+                        // $('input[type="radio"]').prop('checked', false).prop('disabled', false);
+                        $('#submit_applyModal_btn').text('Apply');
                         applicant_parties.val('').trigger('change');
                         applicant_parties.prop('disabled', false);
                     }

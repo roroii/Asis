@@ -103,9 +103,10 @@ class voteController extends Controller
 
             $getTyposition = assignPosition_model::with('getElect_position')->where('typeID', $request->type_id)->get();
 
+            
             if($check_isVoted_count > 0){
 
-                $is_voted = 1;
+                $is_voted = 1;                
 
             }else{
 
@@ -119,17 +120,21 @@ class voteController extends Controller
                     if($type_position->getElect_position){
                         $positionName = $type_position->getElect_position->vote_position;
                     }
+                    $clr_selection = '';
+                    if($is_voted != 1){
+                        $clr_selection = '<a id="'.$type_position->positionID.'" data-position-name="'.$positionName.'" href="javascript:;"  class="revert_vote zoom-in">
+                            <i class="fa fa-undo text-success" aria-hidden="true"></i>
+                            <span id="clr_selection" class="text-slate-500 underline  text-small">Clear Selection</span>
+                        </a>';
+                    }
 
 
                     $typePosition .= ' <div class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5">
-                                            <div id="vote_position_div" style="font-size: 12px" class="font-medium text-base text-md flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5">
+                                            <div id="vote_position_div" style="font-size: 12px" class="font-medium text-base font-bold text-md flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5">
                                                 <i data-lucide="chevron-down" class="w-4 h-4 mr-2"></i>
                                                 '.$positionName.'
                                                 <span class="ml-auto">
-                                                    <a id="'.$type_position->positionID.'" data-position-name="'.$positionName.'" href="javascript:;"  class="revert_vote zoom-in">
-                                                        <i class="fa fa-undo text-success" aria-hidden="true"></i>
-                                                        <span class="text-slate-500 underline  text-small">Clear Selection</span>
-                                                    </a>
+                                                    '.$clr_selection.'
                                                 </span>
                                             </div>
                                             <div class="mt-2">

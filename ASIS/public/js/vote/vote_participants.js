@@ -193,10 +193,12 @@ function onClick_function(){
 
             if (is_voted == 1) {
                 // alert(is_voted);
+                $('#clr_selection').addClass('hidden');
                 $('.voteApplicant_modal_saveBtn').addClass('hidden');
                 $('.voteApplicant_modal_cancelBtn').removeClass('hidden');
                 $('#vote-header_title').text("Your Choosen Candidate for: "+type_name);
             } else {
+                $('#clr_selection').removeClass('hidden');
                 $('#vote-header_title').text("Choose Candidate for: "+type_name);
                 $('.voteApplicant_modal_saveBtn').removeClass('hidden');
                 $('.voteApplicant_modal_cancelBtn').addClass('hidden');
